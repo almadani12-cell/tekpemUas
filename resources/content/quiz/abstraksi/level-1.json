@@ -1,0 +1,276 @@
+{
+  "pillar": "abstraksi",
+  "level": 1,
+  "points_per_question": 1,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "abs_l1_q1",
+      "type": "one_choice",
+      "content": "Apa yang dimaksud dengan abstraksi dalam berpikir komputasional?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memecah masalah kompleks menjadi bagian-bagian kecil"
+        },
+        {
+          "id": "b",
+          "text": "Mengidentifikasi pola dan keteraturan dalam data"
+        },
+        {
+          "id": "c",
+          "text": "Menyaring informasi penting dan mengabaikan detail yang tidak relevan"
+        },
+        {
+          "id": "d",
+          "text": "Membuat urutan langkah-langkah untuk menyelesaikan masalah"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Abstraksi adalah proses menyaring dan memfokuskan pada informasi yang penting sambil mengabaikan detail yang tidak relevan. Ini membantu kita menangani kompleksitas dengan membuat representasi yang lebih sederhana dari masalah atau sistem yang rumit."
+    },
+    
+    {
+      "id": "abs_l1_q2",
+      "type": "one_choice",
+      "content": "Contoh penerapan abstraksi dalam kehidupan sehari-hari adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menggunakan peta untuk mencari jalan (tanpa detail setiap rumah)"
+        },
+        {
+          "id": "b",
+          "text": "Menghitung jumlah siswa yang hadir di kelas"
+        },
+        {
+          "id": "c",
+          "text": "Mengelompokkan buku berdasarkan warna sampul"
+        },
+        {
+          "id": "d",
+          "text": "Menyusun jadwal pelajaran secara berurutan"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Menggunakan peta adalah contoh abstraksi karena peta menyederhanakan realitas kompleks menjadi representasi yang lebih mudah dipahami. Peta hanya menampilkan informasi penting seperti jalan dan landmark, sambil mengabaikan detail yang tidak relevan seperti setiap rumah atau pohon."
+    },
+    
+    {
+      "id": "abs_l1_q3",
+      "type": "one_choice",
+      "content": "Mengapa abstraksi penting dalam pengolahan data?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Karena membuat data menjadi lebih banyak dan kompleks"
+        },
+        {
+          "id": "b",
+          "text": "Karena membantu fokus pada informasi yang benar-benar diperlukan"
+        },
+        {
+          "id": "c",
+          "text": "Karena menghilangkan semua data yang tidak sempurna"
+        },
+        {
+          "id": "d",
+          "text": "Karena mempercepat proses pengetikan data"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Abstraksi penting karena membantu kita fokus pada informasi yang benar-benar diperlukan untuk tujuan tertentu. Dengan mengabaikan detail yang tidak relevan, kita dapat memproses data lebih efisien, membuat keputusan lebih cepat, dan mengurangi kompleksitas yang tidak perlu."
+    },
+    
+    {
+      "id": "abs_l1_q4",
+      "type": "one_choice",
+      "content": "Dalam konteks data siswa, contoh abstraksi yang tepat adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mencatat semua detail tentang siswa termasuk warna sepatu dan model tas"
+        },
+        {
+          "id": "b",
+          "text": "Hanya mencatat informasi penting: nama, NIS, kelas, dan nilai"
+        },
+        {
+          "id": "c",
+          "text": "Menyimpan foto semua siswa dalam database"
+        },
+        {
+          "id": "d",
+          "text": "Mencatat percakapan harian siswa di kelas"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Abstraksi yang tepat untuk data siswa adalah hanya mencatat informasi penting seperti nama, NIS, kelas, dan nilai. Detail seperti warna sepatu atau percakapan harian tidak relevan untuk tujuan administratif atau akademik, sehingga diabaikan untuk menjaga data tetap sederhana dan fokus."
+    },
+    
+    {
+      "id": "abs_l1_q5",
+      "type": "multiple_choices",
+      "content": "Manakah dari situasi berikut yang merupakan penerapan prinsip abstraksi? (Pilih semua yang benar)",
+      "hint": "Pilih semua contoh yang menyederhanakan informasi dengan fokus pada hal penting",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menggunakan simbol pada peta (contoh: ⛽ untuk SPBU)"
+        },
+        {
+          "id": "b",
+          "text": "Membuat resume atau ringkasan dari artikel panjang"
+        },
+        {
+          "id": "c",
+          "text": "Menyimpan semua email yang pernah diterima tanpa filter"
+        },
+        {
+          "id": "d",
+          "text": "Membuat daftar belanja hanya dengan item penting"
+        },
+        {
+          "id": "e",
+          "text": "Mencatat semua percakapan dalam rapat secara verbatim"
+        },
+        {
+          "id": "f",
+          "text": "Menggunakan ikon di aplikasi untuk mewakili fungsi"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "f"],
+      "explanation": "Penerapan abstraksi yang tepat adalah: (a) menggunakan simbol pada peta - mewakili objek kompleks dengan simbol sederhana, (b) membuat resume - menyaring informasi penting dari teks panjang, (d) daftar belanja item penting - fokus pada kebutuhan tanpa detail berlebihan, dan (f) ikon aplikasi - representasi visual sederhana dari fungsi kompleks. Menyimpan semua email dan mencatat verbatim adalah kebalikan dari abstraksi."
+    },
+    
+    {
+      "id": "abs_l1_q6",
+      "type": "multiple_choices",
+      "content": "Karakteristik dari proses abstraksi yang baik adalah... (Pilih semua yang benar)",
+      "hint": "Pilih karakteristik yang menunjukkan penyederhanaan efektif",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mempertahankan informasi yang relevan dengan tujuan"
+        },
+        {
+          "id": "b",
+          "text": "Mengabaikan detail yang tidak penting untuk konteks"
+        },
+        {
+          "id": "c",
+          "text": "Membuat representasi yang lebih sederhana dari realitas kompleks"
+        },
+        {
+          "id": "d",
+          "text": "Selalu menghilangkan semua data numerik"
+        },
+        {
+          "id": "e",
+          "text": "Membuat model yang mudah dipahami dan dikomunikasikan"
+        },
+        {
+          "id": "f",
+          "text": "Menyertakan semua informasi yang tersedia"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "e"],
+      "explanation": "Karakteristik abstraksi yang baik meliputi: (a) mempertahankan informasi relevan - menjaga apa yang penting untuk tujuan, (b) mengabaikan detail tidak penting - mengurangi kompleksitas, (c) membuat representasi sederhana - menurunkan kompleksitas sambil mempertahankan esensi, dan (e) mudah dipahami - komunikasi efektif. Menghilangkan semua data numerik dan menyertakan semua informasi bertentangan dengan prinsip abstraksi."
+    },
+    
+    {
+      "id": "abs_l1_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Susunlah langkah-langkah dalam melakukan abstraksi untuk masalah: \"Membuat database siswa baru\"",
+      "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah abstraksi dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Identifikasi tujuan database (contoh: administrasi, akademik, kesehatan)"
+        },
+        {
+          "id": "step_2",
+          "text": "Tentukan informasi minimal yang diperlukan untuk setiap tujuan"
+        },
+        {
+          "id": "step_3",
+          "text": "Kumpulkan semua data yang mungkin tentang siswa"
+        },
+        {
+          "id": "step_4",
+          "text": "Buat struktur tabel dengan field-field penting saja"
+        },
+        {
+          "id": "step_5",
+          "text": "Abaikan informasi yang tidak konsisten atau sulit diverifikasi"
+        },
+        {
+          "id": "step_6",
+          "text": "Uji apakah informasi yang dipilih sudah cukup untuk kebutuhan"
+        },
+        {
+          "id": "step_7",
+          "text": "Buat form input yang hanya meminta data yang diperlukan"
+        }
+      ],
+      "correct_order": ["step_1", "step_2", "step_3", "step_5", "step_4", "step_6", "step_7"],
+      "explanation": "Proses abstraksi untuk database siswa: (1) Identifikasi tujuan - menentukan untuk apa database digunakan, (2) Tentukan informasi minimal - spesifikasi kebutuhan, (3) Kumpulkan semua data mungkin - inventarisasi, (5) Abaikan informasi tidak konsisten - filter data, (4) Buat struktur tabel - implementasi field penting, (6) Uji kecukupan - validasi, (7) Buat form input - aplikasi praktis."
+    },
+    
+    {
+      "id": "abs_l1_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan contoh representasi di kolom kiri dengan tingkat abstraksi yang tepat di kolom kanan:",
+      "instruction": "Pilih tingkat abstraksi yang sesuai untuk setiap contoh representasi.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Foto detail ruang kelas dengan semua benda"
+        },
+        {
+          "left_id": "2",
+          "left": "Denah ruang kelas dengan simbol meja dan kursi"
+        },
+        {
+          "left_id": "3",
+          "left": "Kapasitas ruang: \"Kelas dapat menampung 30 siswa\""
+        },
+        {
+          "left_id": "4",
+          "left": "Status ruang: \"Tersedia\" atau \"Terpakai\""
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Abstraksi tinggi (sangat sederhana, hanya status)"
+        },
+        {
+          "id": "B",
+          "text": "Abstraksi sedang (informasi kuantitatif penting)"
+        },
+        {
+          "id": "C",
+          "text": "Abstraksi rendah (sedikit disederhanakan)"
+        },
+        {
+          "id": "D",
+          "text": "Konkret/tanpa abstraksi (detail lengkap)"
+        }
+      ],
+      "correct_matches": {
+        "1": "D",
+        "2": "C",
+        "3": "B",
+        "4": "A"
+      },
+      "explanation": "Tingkat abstraksi: (1) Foto detail → Konkret/tanpa abstraksi karena menampilkan semua detail visual, (2) Denah dengan simbol → Abstraksi rendah karena masih menunjukkan layout tapi sudah disederhanakan dengan simbol, (3) Kapasitas 30 siswa → Abstraksi sedang karena hanya informasi kuantitatif penting, (4) Status tersedia/terpakai → Abstraksi tinggi karena hanya informasi biner paling esensial."
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "pillar": "dekomposisi",
+  "level": 2,
+  "points_per_question": 2,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Level 2 berisi soal-soal yang lebih kompleks dan membutuhkan analisis mendalam. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "dek_l2_q1",
+      "type": "one_choice",
+      "content": "Sekolah akan mengadakan survei tentang kebiasaan membaca siswa. Ada 400 siswa yang harus disurvei dengan 15 pertanyaan. Bagaimana cara terbaik menerapkan dekomposisi untuk mengelola data hasil survei ini?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menganalisis semua 400 jawaban sekaligus untuk setiap pertanyaan"
+        },
+        {
+          "id": "b",
+          "text": "Memecah data berdasarkan kelas (X, XI, XII), lalu menganalisis per kelompok"
+        },
+        {
+          "id": "c",
+          "text": "Hanya menganalisis jawaban dari 50 siswa pertama karena terlalu banyak data"
+        },
+        {
+          "id": "d",
+          "text": "Menggabungkan semua jawaban menjadi satu laporan umum tanpa pengelompokan"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Memecah data berdasarkan kelas (X, XI, XII) adalah pendekatan dekomposisi yang tepat karena memungkinkan analisis yang lebih terstruktur dan bermakna. Dengan pengelompokan ini, kita dapat mengidentifikasi pola kebiasaan membaca yang mungkin berbeda antar tingkat kelas, membuat perbandingan yang relevan, dan menghasilkan insight yang lebih actionable untuk setiap kelompok."
+    },
+    
+    {
+      "id": "dek_l2_q2",
+      "type": "one_choice",
+      "content": "Dalam konteks pemrosesan data diskrit, dekomposisi membantu ketika kita memiliki data berjumlah besar dengan cara...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menghapus sebagian data agar jumlahnya berkurang"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan data berdasarkan kriteria tertentu sebelum dianalisis"
+        },
+        {
+          "id": "c",
+          "text": "Mengacak data agar lebih mudah diproses"
+        },
+        {
+          "id": "d",
+          "text": "Mengonversi data menjadi bentuk yang tidak bisa dikenali"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Dekomposisi dalam pemrosesan data besar bekerja dengan mengelompokkan data berdasarkan kriteria tertentu sebelum dianalisis. Pendekatan ini memecah kompleksitas menjadi bagian-bagian yang lebih kecil dan terkelola, memungkinkan analisis yang lebih fokus dan efisien tanpa kehilangan informasi penting dari dataset asli."
+    },
+    
+    {
+      "id": "dek_l2_q3",
+      "type": "one_choice",
+      "content": "Sebuah toko online sekolah mencatat 250 transaksi penjualan kaos selama sebulan. Setiap transaksi berisi: nama pembeli, ukuran kaos (S/M/L/XL), warna, jumlah, dan tanggal. Pendekatan dekomposisi yang PALING efektif untuk menganalisis data ini adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Membaca semua transaksi satu per satu tanpa pengelompokan"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan data berdasarkan warna kaos saja"
+        },
+        {
+          "id": "c",
+          "text": "Membuat laporan berdasarkan: penjualan per ukuran, penjualan per warna, tren harian/mingguan"
+        },
+        {
+          "id": "d",
+          "text": "Hanya fokus pada transaksi dengan jumlah pembelian terbanyak"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Pendekatan dekomposisi yang paling efektif adalah membuat laporan berdasarkan beberapa dimensi: penjualan per ukuran, penjualan per warna, dan tren harian/mingguan. Ini menerapkan prinsip dekomposisi multi-dimensi yang memungkinkan analisis komprehensif dari berbagai sudut pandang, menghasilkan insight yang lebih lengkap untuk pengambilan keputusan bisnis seperti stok ukuran mana yang perlu diperbanyak atau warna apa yang paling diminati."
+    },
+    
+    {
+      "id": "dek_l2_q4",
+      "type": "multiple_choices",
+      "content": "Sebuah perpustakaan digital sekolah memiliki 500 e-book yang perlu dikategorikan. Kategori yang direncanakan: Fiksi, Non-Fiksi, Sains, Sejarah, dan Seni. Untuk menerapkan dekomposisi dalam pengkategorian ini, langkah-langkah yang tepat adalah... (Pilih semua yang benar)",
+      "hint": "Pilih langkah-langkah yang mencerminkan prinsip dekomposisi: memecah masalah besar menjadi bagian yang lebih kecil dan terkelola",
+      "options": [
+        {
+          "id": "a",
+          "text": "Membaca semua 500 buku secara lengkap terlebih dahulu"
+        },
+        {
+          "id": "b",
+          "text": "Membuat sistem penomoran unik untuk setiap buku"
+        },
+        {
+          "id": "c",
+          "text": "Memeriksa setiap buku dan menetapkan kategori utamanya"
+        },
+        {
+          "id": "d",
+          "text": "Mengelompokkan buku berdasarkan tahun terbit terlebih dahulu"
+        },
+        {
+          "id": "e",
+          "text": "Membuat sub-kategori jika dalam kategori utama masih terlalu banyak buku"
+        },
+        {
+          "id": "f",
+          "text": "Menugaskan tim berbeda untuk kategori yang berbeda"
+        }
+      ],
+      "correct_answers": ["b", "c", "e", "f"],
+      "explanation": "Langkah dekomposisi yang tepat: (b) Sistem penomoran unik membantu identifikasi dan tracking setiap item, (c) Menetapkan kategori utama adalah inti dari pengelompokan dekomposisi, (e) Membuat sub-kategori menerapkan dekomposisi bertingkat untuk mengelola kelompok yang masih terlalu besar, (f) Menugaskan tim berbeda untuk kategori berbeda adalah dekomposisi tugas yang efisien. Membaca semua buku lengkap tidak efisien, dan mengelompokkan berdasarkan tahun terbit tidak relevan dengan tujuan kategorisasi konten."
+    },
+    
+    {
+      "id": "dek_l2_q5",
+      "type": "multiple_choices",
+      "content": "Dalam menganalisis data absensi 300 siswa selama satu semester (90 hari), pendekatan dekomposisi dapat dilakukan dengan beberapa cara. Manakah yang merupakan contoh dekomposisi yang efektif? (Pilih semua yang benar)",
+      "hint": "Pilih pendekatan yang memecah data menjadi bagian bermakna tanpa menghilangkan informasi penting",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menganalisis tingkat kehadiran per bulan (3 bulan)"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan siswa berdasarkan jumlah ketidakhadiran (0-5 hari, 6-10 hari, >10 hari)"
+        },
+        {
+          "id": "c",
+          "text": "Membandingkan pola absensi hari Senin vs hari Jumat"
+        },
+        {
+          "id": "d",
+          "text": "Hanya melihat data 10 siswa pertama sebagai sampel"
+        },
+        {
+          "id": "e",
+          "text": "Mencari korelasi antara absensi dengan nilai akademik per mata pelajaran"
+        },
+        {
+          "id": "f",
+          "text": "Menggabungkan semua data absensi menjadi satu angka rata-rata saja"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "e"],
+      "explanation": "Dekomposisi efektif meliputi: (a) Analisis per bulan memecah data temporal menjadi segmen yang lebih kecil, (b) Pengelompokan berdasarkan jumlah ketidakhadiran mengkategorikan siswa untuk intervensi yang tepat, (c) Membandingkan pola hari tertentu mengidentifikasi tren spesifik, (e) Korelasi absensi-nilai menghubungkan dua dimensi data untuk insight mendalam. Sampel 10 siswa terlalu kecil dan tidak representatif, sedangkan satu angka rata-rata menghilangkan detail penting yang justru ingin diungkap oleh dekomposisi."
+    },
+    
+    {
+      "id": "dek_l2_q6",
+      "type": "multiple_choices",
+      "content": "Ketika menghadapi proyek analisis data nilai ulangan 200 siswa untuk 8 mata pelajaran, dekomposisi membantu dalam hal... (Pilih semua yang benar)",
+      "hint": "Pilih pendekatan yang memungkinkan analisis terstruktur dan mendalam",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memisahkan analisis per mata pelajaran terlebih dahulu"
+        },
+        {
+          "id": "b",
+          "text": "Mengidentifikasi siswa yang memerlukan bantuan khusus berdasarkan pola nilai"
+        },
+        {
+          "id": "c",
+          "text": "Membuat peringkat umum tanpa mempertimbangkan kesulitan tiap pelajaran"
+        },
+        {
+          "id": "d",
+          "text": "Menghitung rata-rata kelas untuk setiap mata pelajaran secara terpisah"
+        },
+        {
+          "id": "e",
+          "text": "Mengelompokkan siswa berdasarkan rentang nilai (0-60, 61-80, 81-100)"
+        },
+        {
+          "id": "f",
+          "text": "Menganalisis korelasi antara nilai mata pelajaran yang terkait (misal: Matematika dan Fisika)"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "e", "f"],
+      "explanation": "Dekomposisi yang efektif: (a) Analisis per mata pelajaran memungkinkan fokus pada karakteristik unik tiap pelajaran, (b) Identifikasi siswa berdasarkan pola nilai menerapkan dekomposisi untuk intervensi personal, (d) Rata-rata per mata pelajaran memberikan baseline perbandingan, (e) Pengelompokan rentang nilai mengkategorikan performa untuk tindak lanjut yang tepat, (f) Analisis korelasi antar mata pelajaran terkait mengungkap hubungan yang berguna. Peringkat umum tanpa mempertimbangkan kesulitan tidak mencerminkan prinsip dekomposisi yang memahami kompleksitas masing-masing komponen."
+    },
+    
+    {
+      "id": "dek_l2_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Sebuah OSIS akan mengelola data pendaftaran ekskul yang diikuti oleh 350 siswa. Ada 12 ekskul yang tersedia. Susunlah langkah-langkah dekomposisi yang logis untuk membuat laporan analisis pendaftaran.",
+      "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah dekomposisi dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Menghitung jumlah pendaftar untuk setiap ekskul"
+        },
+        {
+          "id": "step_2",
+          "text": "Membuat visualisasi data (diagram batang/lingkaran)"
+        },
+        {
+          "id": "step_3",
+          "text": "Mengidentifikasi ekskul dengan pendaftaran terendah untuk evaluasi"
+        },
+        {
+          "id": "step_4",
+          "text": "Memisahkan data mentah menjadi 12 kelompok berdasarkan jenis ekskul"
+        },
+        {
+          "id": "step_5",
+          "text": "Menganalisis distribusi pendaftar berdasarkan kelas (X, XI, XII)"
+        },
+        {
+          "id": "step_6",
+          "text": "Membuat rekomendasi berdasarkan analisis (misal: ekskul yang perlu promosi lebih)"
+        },
+        {
+          "id": "step_7",
+          "text": "Mengurutkan ekskul dari yang paling banyak hingga paling sedikit peminatnya"
+        }
+      ],
+      "correct_order": ["step_4", "step_1", "step_7", "step_5", "step_3", "step_2", "step_6"],
+      "explanation": "Urutan dekomposisi yang logis: (1) Memisahkan data menjadi 12 kelompok - langkah awal dekomposisi, (2) Menghitung jumlah pendaftar per ekskul - kuantifikasi setiap kelompok, (3) Mengurutkan berdasarkan peminat - memberikan gambaran prioritas, (4) Menganalisis distribusi per kelas - dekomposisi lanjutan untuk insight lebih dalam, (5) Mengidentifikasi ekskul terendah - fokus pada area yang perlu perhatian, (6) Membuat visualisasi - presentasi hasil analisis, (7) Membuat rekomendasi - kesimpulan actionable dari seluruh proses dekomposisi."
+    },
+    
+    {
+      "id": "dek_l2_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan masalah pengolahan data di kolom kiri dengan strategi dekomposisi yang paling tepat di kolom kanan:",
+      "instruction": "Pilih strategi dekomposisi yang paling sesuai untuk setiap masalah pengolahan data.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Menganalisis hasil survei kepuasan siswa (200 responden, 10 pertanyaan)"
+        },
+        {
+          "left_id": "2",
+          "left": "Mengelola inventaris lab komputer (50 unit, dengan detail spesifikasi)"
+        },
+        {
+          "left_id": "3",
+          "left": "Memantau perkembangan nilai 150 siswa selama 3 caturwulan"
+        },
+        {
+          "left_id": "4",
+          "left": "Mengategorikan arsip surat masuk sekolah (300 surat dalam setahun)"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Kelompokkan surat berdasarkan: pengirim, jenis urusan, bulan penerimaan"
+        },
+        {
+          "id": "B",
+          "text": "Analisis per pertanyaan, cari pola jawaban, kelompokkan berdasarkan tingkat kepuasan"
+        },
+        {
+          "id": "C",
+          "text": "Buat kelompok berdasarkan spesifikasi (RAM, processor), lalu analisis kondisi per kelompok"
+        },
+        {
+          "id": "D",
+          "text": "Analisis perkembangan per caturwulan, identifikasi siswa dengan peningkatan/penurunan signifikan"
+        }
+      ],
+      "correct_matches": {
+        "1": "B",
+        "2": "C",
+        "3": "D",
+        "4": "A"
+      },
+      "explanation": "Pasangan strategi dekomposisi yang tepat: (1) Survei kepuasan → Analisis per pertanyaan dan pola jawaban karena data survei paling efektif dianalisis berdasarkan dimensi pertanyaan dan tingkat kepuasan, (2) Inventaris lab → Kelompok berdasarkan spesifikasi karena memudahkan manajemen dan pemeliharaan berdasarkan karakteristik teknis, (3) Perkembangan nilai → Analisis per caturwulan karena data temporal paling tepat dianalisis berdasarkan periode waktu untuk melihat tren, (4) Arsip surat → Kelompokkan berdasarkan pengirim, jenis urusan, dan bulan karena memudahkan pencarian dan manajemen dokumen."
+    }
+  ]
+}

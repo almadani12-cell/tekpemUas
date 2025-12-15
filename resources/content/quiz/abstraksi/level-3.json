@@ -1,0 +1,302 @@
+{
+    "pillar": "abstraksi",
+    "level": 3,
+    "points_per_question": 3,
+    "total_questions": 8,
+    "pass_threshold": 80,
+    "questions": [
+        {
+            "id": 1,
+            "type": "one_choice",
+            "content": "Sebuah platform pendidikan terintegrasi mengumpulkan data dari 5 sumber: LMS (2.000 siswa), perpustakaan digital (50.000 interaksi), kesehatan (1.200 rekam medis), keuangan (15.000 transaksi), dan kegiatan ekstra (800 partisipasi). Untuk membuat dashboard \"Student 360°\" yang efektif tanpa overload informasi, prinsip abstraksi apa yang PALING KRITIS?",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Menampilkan semua data mentah dari semua sumber agar lengkap"
+                },
+                {
+                    "id": "b",
+                    "text": "Membuat ringkasan ekstrim: hanya status \"baik\" atau \"perlu perhatian\""
+                },
+                {
+                    "id": "c",
+                    "text": "Menyajikan indikator kunci per domain dengan drill-down capability"
+                },
+                {
+                    "id": "d",
+                    "text": "Hanya menampilkan data dari satu sumber terpenting saja"
+                }
+            ],
+            "correct_answer": "c",
+            "explanation": "Prinsip abstraksi yang paling kritis adalah menyajikan indikator kunci per domain dengan drill-down capability. Ini menerapkan abstraksi berlapis yang optimal: layer pertama menampilkan KPI (Key Performance Indicators) per domain untuk overview cepat tanpa overload, namun tetap menyediakan akses ke detail melalui drill-down untuk stakeholder yang membutuhkan. Opsi a (semua data mentah) menyebabkan information overload, opsi b (terlalu ekstrim) kehilangan nuance dan konteks penting, opsi d (satu sumber) kehilangan perspektif holistik yang justru menjadi nilai dari dashboard 360°."
+        },
+        {
+            "id": 2,
+            "type": "multiple_choices",
+            "content": "Dalam mendesain data warehouse untuk sekolah dengan data historis 5 tahun (3.000 siswa × 8 semester × 10 pelajaran = ~1,2 juta nilai), pertimbangan abstraksi yang harus dievaluasi adalah: (Pilih semua yang benar)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Level granularitas: nilai per tugas vs nilai per semester vs nilai akhir"
+                },
+                {
+                    "id": "b",
+                    "text": "Dimensi waktu: harian vs mingguan vs semesteran"
+                },
+                {
+                    "id": "c",
+                    "text": "Dimensi siswa: individu vs kelas vs jurusan vs angkatan"
+                },
+                {
+                    "id": "d",
+                    "text": "Trade-off: detail vs performa query"
+                },
+                {
+                    "id": "e",
+                    "text": "Menyimpan semua data mentah tanpa agregasi"
+                },
+                {
+                    "id": "f",
+                    "text": "Membuat only aggregate tables tanpa data detail"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d"],
+            "explanation": "Pertimbangan abstraksi yang tepat untuk data warehouse: (a) Level granularitas menentukan trade-off antara detail dan volume storage, (b) Dimensi waktu mempengaruhi kemampuan analisis temporal, (c) Dimensi siswa memungkinkan analisis di berbagai level agregasi, (d) Trade-off detail vs performa adalah inti dari keputusan abstraksi. Opsi e dan f adalah ekstrem yang tidak optimal - e mengabaikan benefit agregasi untuk performa, f kehilangan kemampuan untuk detail analysis ketika dibutuhkan. Pendekatan terbaik adalah hybrid: raw data untuk flexibility + pre-aggregated tables untuk performa."
+        },
+        {
+            "id": 3,
+            "type": "multiple_choices",
+            "content": "Sebuah sistem IoT kampus memiliki 500 sensor yang menghasilkan 10 juta data points per bulan. Untuk sistem monitoring real-time dan analisis historis, strategi abstraksi berlapis (multi-tier) yang efektif meliputi: (Pilih semua yang tepat)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Tier 1: Raw data storage untuk backup dan audit"
+                },
+                {
+                    "id": "b",
+                    "text": "Tier 2: 5-minute aggregates untuk dashboard real-time"
+                },
+                {
+                    "id": "c",
+                    "text": "Tier 3: Hourly aggregates untuk analisis tren harian"
+                },
+                {
+                    "id": "d",
+                    "text": "Tier 4: Daily aggregates untuk laporan mingguan/bulanan"
+                },
+                {
+                    "id": "e",
+                    "text": "Tier 5: Metadata hanya (status sensor, lokasi) tanpa nilai"
+                },
+                {
+                    "id": "f",
+                    "text": "Hanya menyimpan data saat anomali terdeteksi"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d"],
+            "explanation": "Strategi multi-tier yang efektif untuk IoT data: (a) Raw data tier untuk compliance dan reprocessing capability, (b) 5-minute aggregates memberikan responsiveness untuk real-time monitoring tanpa overhead raw data, (c) Hourly aggregates optimal untuk trend analysis dalam timeframe harian, (d) Daily aggregates efficient untuk reporting dan long-term analysis. Opsi e (metadata only) kehilangan kemampuan analisis nilai sensor yang justru inti dari IoT. Opsi f (hanya anomali) berisiko tinggi kehilangan baseline data dan pola normal yang penting untuk context dan comparative analysis."
+        },
+        {
+            "id": 4,
+            "type": "multiple_choices",
+            "content": "Perhatikan skenario abstraksi untuk sistem prediksi dropout siswa berdasarkan 50 variabel dari 2.000 siswa. Evaluasi trade-off berikut: (Pilih semua yang menggambarkan trade-off abstraksi yang tepat)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Mengurangi dari 50 ke 15 variabel meningkatkan kecepatan model tetapi mungkin mengurangi akurasi"
+                },
+                {
+                    "id": "b",
+                    "text": "Menggabungkan variabel terkait (misal: nilai matematika+fisika+kimia menjadi \"nilai sains\") mengurangi detail tetapi meningkatkan interpretabilitas"
+                },
+                {
+                    "id": "c",
+                    "text": "Menghilangkan semua data kualitatif menyederhanakan analisis tetapi kehilangan konteks"
+                },
+                {
+                    "id": "d",
+                    "text": "Menyimpan semua data dalam bentuk asli mempertahankan informasi tetapi mahal secara komputasi"
+                },
+                {
+                    "id": "e",
+                    "text": "Membuat kategori biner (risiko tinggi/rendah) sangat sederhana tetapi kehilangan gradasi"
+                },
+                {
+                    "id": "f",
+                    "text": "Abstraksi selalu meningkatkan kualitas data tanpa kerugian"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d", "e"],
+            "explanation": "Semua opsi kecuali f menggambarkan trade-off abstraksi yang valid: (a) Feature reduction vs accuracy - classic bias-variance tradeoff, (b) Aggregation vs granularity - simplicity vs detail, (c) Data type filtering vs completeness - quantitative focus vs qualitative context, (d) Raw data vs preprocessed - information preservation vs computational efficiency, (e) Discretization vs continuous - interpretability vs precision. Opsi f salah karena abstraksi SELALU melibatkan trade-off - tidak ada abstraksi yang 'free' tanpa information loss. Kunci adalah memilih trade-off yang aligned dengan use case dan prioritas sistem."
+        },
+        {
+            "id": 5,
+            "type": "multiple_choices",
+            "content": "Sebuah sistem manajemen pengetahuan sekolah perlu mengabstraksi konten dari 10.000 dokumen (RPP, modul, penelitian, administrasi). Pertimbangan desain abstraksi yang perlu dievaluasi: (Pilih semua yang relevan)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Metadata vs konten lengkap: tag vs full-text search"
+                },
+                {
+                    "id": "b",
+                    "text": "Hierarki kategori: subjek → topik → subtopik vs flat tagging"
+                },
+                {
+                    "id": "c",
+                    "text": "Auto-summarization untuk preview dokumen panjang"
+                },
+                {
+                    "id": "d",
+                    "text": "Version control untuk dokumen yang sering diperbarui"
+                },
+                {
+                    "id": "e",
+                    "text": "Menyimpan semua dokumen sebagai scan tanpa OCR"
+                },
+                {
+                    "id": "f",
+                    "text": "Representasi visual: knowledge graph vs database relational"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d", "f"],
+            "explanation": "Pertimbangan abstraksi yang relevan: (a) Metadata memberikan abstraksi terstruktur untuk search cepat, full-text untuk comprehensive retrieval - keduanya complementary, (b) Hierarki menyediakan abstraksi struktural yang memfasilitasi navigation top-down, flat tagging lebih flexible tapi kurang structured, (c) Auto-summarization adalah abstraksi konten yang mempertahankan esensi sambil mengurangi cognitive load untuk preview, (d) Version control adalah abstraksi temporal yang essential untuk dokumen living documents, (f) Knowledge graph vs relational adalah trade-off antara relationship-centric vs entity-centric abstraction. Opsi e (scan tanpa OCR) bukan abstraksi melainkan digitalisasi tanpa machine-readability yang menghambat search dan analysis."
+        },
+        {
+            "id": 6,
+            "type": "drag_drop",
+            "drag_drop_type": "sequence",
+            "content": "Sebuah sistem analisis pembelajaran adaptif mengolah data dari 3 sumber: LMS (log interaksi), assessment (nilai dan respons), dan biometric (perhatian via webcam). Susunlah arsitektur abstraksi berlapis untuk sistem ini.",
+            "instruction": "Klik dan drag item untuk mengurutkan dari layer paling bawah (dasar) ke layer paling atas (presentasi).",
+            "items": [
+                {
+                    "id": "layer1",
+                    "text": "Layer Raw Data: log mentah, video, jawaban essay"
+                },
+                {
+                    "id": "layer2",
+                    "text": "Layer Storage: database time-series, data lake, warehouse"
+                },
+                {
+                    "id": "layer3",
+                    "text": "Layer Preprocessing: cleaning, normalization, segmentation"
+                },
+                {
+                    "id": "layer4",
+                    "text": "Layer Aggregation: sesi belajar, quiz results, engagement metrics"
+                },
+                {
+                    "id": "layer5",
+                    "text": "Layer Feature: variabel turunan (attention span, mastery level)"
+                },
+                {
+                    "id": "layer6",
+                    "text": "Layer Analytics: model pembelajaran style dan kesulitan pola"
+                },
+                {
+                    "id": "layer7",
+                    "text": "Layer Application: sistem rekomendasi konten dan intervensi"
+                },
+                {
+                    "id": "layer8",
+                    "text": "Layer Presentation: dashboard guru dengan rekomendasi tindakan"
+                }
+            ],
+            "correct_order": ["layer1", "layer2", "layer3", "layer4", "layer5", "layer6", "layer7", "layer8"],
+            "explanation": "Arsitektur abstraksi berlapis yang koheren: (1) Raw Data - sumber data mentah dari berbagai sistem, (2) Storage - infrastruktur penyimpanan yang sesuai dengan tipe data, (3) Preprocessing - pembersihan dan normalisasi untuk data quality, (4) Aggregation - penggabungan data granular menjadi unit bermakna (sesi, results), (5) Feature - ekstraksi variabel turunan higher-level yang lebih meaningful, (6) Analytics - model dan algoritma untuk pattern recognition dan prediction, (7) Application - business logic dan automation untuk actionable insights, (8) Presentation - interface user-friendly dengan visualisasi dan rekomendasi. Setiap layer mengabstraksi kompleksitas layer di bawahnya dan menyediakan interface yang lebih meaningful untuk layer di atasnya."
+        },
+        {
+            "id": 7,
+            "type": "drag_drop",
+            "drag_drop_type": "matching",
+            "content": "Sebuah proyek digital twin sekolah membuat model virtual dari fisik sekolah. Pasangkan setiap komponen fisik dengan representasi abstrak yang sesuai.",
+            "instruction": "Pilih representasi abstrak yang paling sesuai untuk setiap komponen fisik.",
+            "pairs": [
+                {
+                    "left_id": "1",
+                    "left": "Gedung dengan 30 ruangan, 500 perabot, 1000 perangkat"
+                },
+                {
+                    "left_id": "2",
+                    "left": "Komunitas: 2000 siswa, 150 guru, 50 staf dengan interaksi sosial"
+                },
+                {
+                    "left_id": "3",
+                    "left": "Proses: alur akademik, administrasi, kegiatan ekstra"
+                },
+                {
+                    "left_id": "4",
+                    "left": "Sistem: jaringan listrik, air, internet, keamanan"
+                }
+            ],
+            "right_items": [
+                {
+                    "id": "A",
+                    "text": "Process model: flowchart, state machine, business rules"
+                },
+                {
+                    "id": "B",
+                    "text": "3D model simplified dengan zona fungsional dan kapasitas"
+                },
+                {
+                    "id": "C",
+                    "text": "Social graph dengan role, hubungan, dan pola komunikasi"
+                },
+                {
+                    "id": "D",
+                    "text": "System diagram dengan node, connection, dan status"
+                }
+            ],
+            "correct_matches": {
+                "1": "B",
+                "2": "C",
+                "3": "A",
+                "4": "D"
+            },
+            "explanation": "Pasangan abstraksi yang tepat untuk digital twin: (1-B) Gedung fisik diabstraksi sebagai 3D model simplified - tidak perlu detail setiap furniture, cukup zona fungsional dan kapasitas untuk simulation dan planning, (2-C) Komunitas diabstraksi sebagai social graph - fokus pada relasi dan peran, bukan detail pribadi setiap individu, memungkinkan analisis network dan komunikasi pattern, (3-A) Proses diabstraksi sebagai flowchart dan state machine - menangkap logika dan alur tanpa detail implementasi setiap step, (4-D) Sistem infrastruktur diabstraksi sebagai diagram dengan nodes dan connections - abstraksi topologi dan status operasional tanpa kompleksitas engineering detail. Setiap abstraksi mempertahankan informasi esensial untuk use case digital twin sambil mengurangi kompleksitas yang tidak perlu."
+        },
+        {
+            "id": 8,
+            "type": "drag_drop",
+            "drag_drop_type": "sequence",
+            "content": "Rancang strategi abstraksi data untuk sistem early warning akademik yang scalable (dari 1 sekolah ke 100 sekolah). Susun komponen berikut menjadi framework yang koheren.",
+            "instruction": "Klik dan drag item untuk menyusun dari prinsip dasar hingga implementasi dan monitoring.",
+            "items": [
+                {
+                    "id": "step1",
+                    "text": "Prinsip: \"As Simple as Possible, But Not Simpler\" (Einstein)"
+                },
+                {
+                    "id": "step2",
+                    "text": "Use Case Analysis: identifikasi kebutuhan stakeholder berbeda"
+                },
+                {
+                    "id": "step3",
+                    "text": "Data Standards: skema data terstandarisasi antar sekolah"
+                },
+                {
+                    "id": "step4",
+                    "text": "Technical: multi-resolution data storage (raw → aggregated)"
+                },
+                {
+                    "id": "step5",
+                    "text": "Implementation: pipeline ETL dengan tiered abstraction"
+                },
+                {
+                    "id": "step6",
+                    "text": "Governance: kebijakan retensi dan archival data"
+                },
+                {
+                    "id": "step7",
+                    "text": "Validation: testing dengan data real dan simulasi"
+                },
+                {
+                    "id": "step8",
+                    "text": "Monitoring: metrics kualitas abstraksi (information loss vs utility)"
+                }
+            ],
+            "correct_order": ["step1", "step2", "step3", "step4", "step5", "step6", "step7", "step8"],
+            "explanation": "Framework strategi abstraksi yang koheren dan scalable: (1) Prinsip filosofis - memandu seluruh desain untuk balance antara simplicity dan completeness, (2) Use Case Analysis - memahami kebutuhan berbagai stakeholder (guru, kepala sekolah, dinas) untuk menentukan level abstraksi yang tepat, (3) Data Standards - standardisasi essential untuk scalability multi-sekolah, memungkinkan aggregation dan comparison, (4) Technical architecture - desain multi-resolution memungkinkan flexibility untuk berbagai use case tanpa redundancy, (5) Implementation - pipeline ETL konkret yang menerapkan tiered abstraction strategy, (6) Governance - kebijakan untuk sustainability dan compliance jangka panjang, (7) Validation - memastikan abstraksi preserves meaningful information dan sistem works as intended, (8) Monitoring - continuous assessment untuk memastikan abstraksi tetap optimal seiring evolusi kebutuhan dan data. Framework ini applicable dari pilot single school hingga deployment 100+ schools."
+        }
+    ]
+}

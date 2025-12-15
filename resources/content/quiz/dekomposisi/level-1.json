@@ -1,0 +1,274 @@
+{
+  "pillar": "dekomposisi",
+  "level": 1,
+  "points_per_question": 1,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "dek_l1_q1",
+      "type": "one_choice",
+      "content": "Apa yang dimaksud dengan dekomposisi dalam berpikir komputasional?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menggabungkan beberapa masalah kecil menjadi satu masalah besar"
+        },
+        {
+          "id": "b",
+          "text": "Memecah masalah kompleks menjadi bagian-bagian yang lebih sederhana"
+        },
+        {
+          "id": "c",
+          "text": "Mencari pola dalam kumpulan data"
+        },
+        {
+          "id": "d",
+          "text": "Mengabaikan detail yang tidak penting dari suatu masalah"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Dekomposisi adalah proses memecah masalah kompleks menjadi bagian-bagian yang lebih sederhana dan mudah dikelola. Ini adalah salah satu pilar utama dalam berpikir komputasional yang membantu kita menyelesaikan masalah besar dengan cara yang sistematis."
+    },
+    
+    {
+      "id": "dek_l1_q2",
+      "type": "one_choice",
+      "content": "Contoh berikut yang BUKAN penerapan dekomposisi adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Membagi tugas kelompok menjadi: riset, menulis, presentasi"
+        },
+        {
+          "id": "b",
+          "text": "Mempelajari seluruh buku pelajaran sekaligus dalam satu malam"
+        },
+        {
+          "id": "c",
+          "text": "Merencanakan acara ulang tahun dengan membagi tugas: dekorasi, konsumsi, dokumentasi"
+        },
+        {
+          "id": "d",
+          "text": "Menyusun karya tulis ilmiah per bab: pendahuluan, teori, metodologi, hasil, penutup"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Mempelajari seluruh buku sekaligus dalam satu malam adalah BUKAN dekomposisi karena tidak memecah masalah menjadi bagian-bagian kecil. Sebaliknya, ini adalah pendekatan yang tidak terstruktur dan cenderung membuat kewalahan. Dekomposisi seharusnya membagi materi per bab atau topik untuk dipelajari secara bertahap."
+    },
+    
+    {
+      "id": "dek_l1_q3",
+      "type": "one_choice",
+      "content": "Mengapa dekomposisi penting ketika menghadapi data dalam jumlah besar?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Karena membuat masalah terlihat lebih penting"
+        },
+        {
+          "id": "b",
+          "text": "Karena mengurangi rasa kewalahan dan memudahkan pengelolaan"
+        },
+        {
+          "id": "c",
+          "text": "Karena mempercepat komputer dalam memproses data"
+        },
+        {
+          "id": "d",
+          "text": "Karena selalu menghasilkan solusi yang instan"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Dekomposisi penting karena mengurangi rasa kewalahan dan memudahkan pengelolaan data besar. Dengan memecah data menjadi bagian-bagian yang lebih kecil, kita dapat fokus pada satu bagian dalam satu waktu, sehingga proses pengelolaan menjadi lebih terorganisir dan tidak membebani."
+    },
+    
+    {
+      "id": "dek_l1_q4",
+      "type": "one_choice",
+      "content": "Dari pernyataan berikut, manakah yang merupakan karakteristik dekomposisi?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menyelesaikan semua bagian secara bersamaan"
+        },
+        {
+          "id": "b",
+          "text": "Membuat masalah menjadi lebih rumit daripada sebelumnya"
+        },
+        {
+          "id": "c",
+          "text": "Bagian-bagian yang dihasilkan bisa dikerjakan secara terpisah"
+        },
+        {
+          "id": "d",
+          "text": "Hanya cocok untuk masalah yang berhubungan dengan matematika"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Karakteristik utama dekomposisi adalah bagian-bagian yang dihasilkan dapat dikerjakan secara terpisah dan independen. Ini memungkinkan pembagian tugas dalam tim, pengerjaan paralel, dan pengelolaan yang lebih fleksibel. Dekomposisi tidak terbatas pada matematika saja, tetapi dapat diterapkan pada berbagai jenis masalah."
+    },
+    
+    {
+      "id": "dek_l1_q5",
+      "type": "multiple_choices",
+      "content": "Manakah dari situasi berikut yang dapat diselesaikan dengan pendekatan dekomposisi? (Pilih semua yang benar)",
+      "hint": "Pilih 3 jawaban yang tepat",
+      "min_correct": 3,
+      "options": [
+        {
+          "id": "a",
+          "text": "Menyusun proyek video dokumenter sekolah"
+        },
+        {
+          "id": "b",
+          "text": "Mengorganisir data 150 siswa untuk pendaftaran ekstrakurikuler"
+        },
+        {
+          "id": "c",
+          "text": "Menghafal semua rumus matematika untuk ujian besok"
+        },
+        {
+          "id": "d",
+          "text": "Merencanakan perjalanan study tour selama 3 hari"
+        },
+        {
+          "id": "e",
+          "text": "Mencari satu kata dalam kamus tebal tanpa menggunakan indeks"
+        }
+      ],
+      "correct_answers": ["a", "b", "d"],
+      "explanation": "Menyusun proyek video dokumenter (bisa dipecah menjadi: skrip, pengambilan gambar, editing), mengorganisir data 150 siswa (bisa dipecah per kelas atau per ekstrakurikuler), dan merencanakan study tour (bisa dipecah menjadi: transportasi, akomodasi, itinerary) semuanya cocok untuk pendekatan dekomposisi. Menghafal rumus sekaligus dan mencari kata tanpa indeks adalah pendekatan yang tidak terstruktur."
+    },
+    
+    {
+      "id": "dek_l1_q6",
+      "type": "multiple_choices",
+      "content": "Keuntungan-keuntungan menggunakan dekomposisi adalah... (Pilih semua yang benar)",
+      "hint": "Pilih 4 jawaban yang tepat",
+      "min_correct": 4,
+      "options": [
+        {
+          "id": "a",
+          "text": "Memudahkan evaluasi kemajuan penyelesaian masalah"
+        },
+        {
+          "id": "b",
+          "text": "Membagi tugas dalam kerja tim menjadi lebih jelas"
+        },
+        {
+          "id": "c",
+          "text": "Selalu menjamin masalah selesai lebih cepat"
+        },
+        {
+          "id": "d",
+          "text": "Memberikan rasa pencapaian setelah menyelesaikan setiap bagian"
+        },
+        {
+          "id": "e",
+          "text": "Membuat masalah besar terlihat tidak menakutkan"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "e"],
+      "explanation": "Dekomposisi memiliki banyak keuntungan: memudahkan evaluasi (kita bisa track progress per bagian), membagi tugas tim dengan jelas (setiap anggota punya tanggung jawab spesifik), memberikan rasa pencapaian (setiap bagian yang selesai adalah milestone), dan membuat masalah besar tidak menakutkan (karena sudah dipecah jadi bagian kecil). Namun, dekomposisi tidak selalu menjamin masalah selesai lebih cepat - tergantung kompleksitas dan pelaksanaannya."
+    },
+    
+    {
+      "id": "dek_l1_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Susunlah langkah-langkah dekomposisi berikut untuk masalah: \"Menyiapkan presentasi kelompok tentang pemanasan global\"",
+      "instruction": "Drag and drop untuk mengurutkan dari langkah pertama hingga terakhir",
+      "items": [
+        {
+          "id": "1",
+          "text": "Menentukan topik utama: \"Dampak Pemanasan Global bagi Kehidupan Laut\""
+        },
+        {
+          "id": "2",
+          "text": "Membagi konten presentasi menjadi: pengantar, penyebab, dampak, solusi"
+        },
+        {
+          "id": "3",
+          "text": "Menunjuk siapa yang bertanggung jawab untuk setiap bagian"
+        },
+        {
+          "id": "4",
+          "text": "Mengumpulkan data dan gambar untuk setiap bagian"
+        },
+        {
+          "id": "5",
+          "text": "Membuat slide untuk setiap bagian yang sudah dibagi"
+        },
+        {
+          "id": "6",
+          "text": "Melakukan revisi akhir dan latihan presentasi"
+        }
+      ],
+      "correct_order": ["1", "2", "3", "4", "5", "6"],
+      "explanation": "Urutan yang benar dalam dekomposisi pembuatan presentasi adalah: (1) Tentukan topik utama dulu sebagai fondasi, (2) Pecah konten menjadi bagian-bagian logis, (3) Distribusikan tanggung jawab ke anggota tim, (4) Kumpulkan materi untuk masing-masing bagian, (5) Buat slide berdasarkan materi yang sudah terkumpul, (6) Terakhir lakukan revisi dan latihan. Urutan ini mencerminkan proses dekomposisi yang sistematis dari konsep hingga eksekusi."
+    },
+    
+    {
+      "id": "dek_l1_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan masalah di kolom kiri dengan cara dekomposisi yang tepat di kolom kanan",
+      "instruction": "Drag and drop untuk memasangkan setiap masalah dengan solusi dekomposisinya",
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Merapikan kamar yang berantakan",
+          "left_id": "1",
+          "correct_right": "A"
+        },
+        {
+          "id": "pair2",
+          "left": "Mempersiapkan ujian 5 mata pelajaran",
+          "left_id": "2",
+          "correct_right": "B"
+        },
+        {
+          "id": "pair3",
+          "left": "Mengelola tabungan pribadi selama sebulan",
+          "left_id": "3",
+          "correct_right": "C"
+        },
+        {
+          "id": "pair4",
+          "left": "Membuat laporan keuangan kelas",
+          "left_id": "4",
+          "correct_right": "D"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Pisahkan berdasarkan kategori: baju kotor, buku, peralatan, sampah"
+        },
+        {
+          "id": "B",
+          "text": "Buat jadwal belajar per mata pelajaran, prioritaskan yang paling sulit"
+        },
+        {
+          "id": "C",
+          "text": "Kelompokkan pengeluaran: transportasi, jajan, kebutuhan sekolah, hiburan"
+        },
+        {
+          "id": "D",
+          "text": "Pisahkan data: pemasukan (iuran), pengeluaran (kebutuhan kelas), sisa saldo"
+        }
+      ],
+      "correct_matches": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "explanation": "Pasangan yang benar: (1-A) Merapikan kamar → pisahkan berdasarkan kategori barang, (2-B) Persiapan ujian → buat jadwal per mata pelajaran dengan prioritas, (3-C) Kelola tabungan → kelompokkan jenis pengeluaran, (4-D) Laporan keuangan → pisahkan komponen: pemasukan, pengeluaran, saldo. Setiap cara dekomposisi disesuaikan dengan karakteristik masalah yang dihadapi."
+    }
+  ]
+}

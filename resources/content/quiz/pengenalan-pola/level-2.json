@@ -1,0 +1,285 @@
+{
+  "pillar": "pengenalan-pola",
+  "level": 2,
+  "points_per_question": 2,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Level 2 berisi soal-soal yang lebih kompleks dan membutuhkan analisis mendalam. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "pol_l2_q1",
+      "type": "one_choice",
+      "content": "Sebuah kantin sekolah menganalisis data penjualan 300 makanan selama satu bulan. Pola yang ditemukan: \"Makanan pedas laris pada hari Senin dan Jumat, sedangkan makanan manis laris di hari Rabu.\" Pola ini termasuk jenis pola berdasarkan...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Waktu (temporal pattern)"
+        },
+        {
+          "id": "b",
+          "text": "Spasial (keruangan)"
+        },
+        {
+          "id": "c",
+          "text": "Numerik (angka berurutan)"
+        },
+        {
+          "id": "d",
+          "text": "Acak (tidak teratur)"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Ini adalah pola temporal (berbasis waktu) karena penjualan makanan menunjukkan keteraturan berdasarkan hari-hari tertentu dalam seminggu. Makanan pedas laris di hari Senin dan Jumat, sedangkan makanan manis laris di hari Rabu - menunjukkan ada pola berulang yang terkait dengan dimensi waktu (hari dalam seminggu)."
+    },
+    
+    {
+      "id": "pol_l2_q2",
+      "type": "one_choice",
+      "content": "Data tinggi badan 250 siswa kelas X menunjukkan: 150-155cm: 20 siswa, 156-160cm: 45 siswa, 161-165cm: 85 siswa, 166-170cm: 70 siswa, 171-175cm: 30 siswa. Pola distribusi yang terlihat adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Distribusi seragam (sama rata di semua kategori)"
+        },
+        {
+          "id": "b",
+          "text": "Distribusi normal (berbentuk lonceng, tinggi di tengah)"
+        },
+        {
+          "id": "c",
+          "text": "Distribusi menurun (semakin tinggi kategori, semakin sedikit siswa)"
+        },
+        {
+          "id": "d",
+          "text": "Tidak ada pola yang jelas"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Data menunjukkan distribusi normal (bell curve) karena frekuensi tertinggi berada di tengah rentang (161-165cm dengan 85 siswa), kemudian menurun secara simetris ke arah kedua ujung: ke bawah (45, 20) dan ke atas (70, 30). Pola berbentuk lonceng ini adalah karakteristik distribusi normal yang sering ditemukan pada data biologis seperti tinggi badan."
+    },
+    
+    {
+      "id": "pol_l2_q3",
+      "type": "one_choice",
+      "content": "Dalam data nilai 200 siswa untuk mata pelajaran Fisika, ditemukan bahwa siswa yang memiliki nilai Matematika tinggi (≥80) cenderung juga memiliki nilai Fisika tinggi (≥75). Pola ini menunjukkan...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Korelasi positif antara kemampuan Matematika dan Fisika"
+        },
+        {
+          "id": "b",
+          "text": "Tidak ada hubungan antara kedua mata pelajaran"
+        },
+        {
+          "id": "c",
+          "text": "Korelasi negatif (satu naik, satu turun)"
+        },
+        {
+          "id": "d",
+          "text": "Pola acak tanpa makna"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Ini adalah contoh korelasi positif, di mana nilai tinggi di satu variabel (Matematika) cenderung diikuti oleh nilai tinggi di variabel lain (Fisika). Hal ini masuk akal karena kedua mata pelajaran memerlukan kemampuan berpikir logis, analitis, dan pemahaman konsep kuantitatif yang saling terkait. Korelasi positif seperti ini berguna untuk prediksi dan pemahaman hubungan antar variabel."
+    },
+    
+    {
+      "id": "pol_l2_q4",
+      "type": "multiple_choices",
+      "content": "Sebuah sistem presensi digital mencatat waktu kedatangan 400 siswa selama 20 hari. Berikut adalah beberapa pola yang mungkin ditemukan: (Pilih semua yang benar)",
+      "hint": "Pilih pola yang masuk akal dan dapat dikenali dari data presensi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rata-rata keterlambatan lebih tinggi pada hari Senin"
+        },
+        {
+          "id": "b",
+          "text": "Tidak ada perbedaan antara hari biasa dan hari sebelum libur"
+        },
+        {
+          "id": "c",
+          "text": "Siswa yang rumahnya lebih jauh cenderung datang lebih awal"
+        },
+        {
+          "id": "d",
+          "text": "Waktu kedatangan tercepat biasanya 30 menit sebelum bel masuk"
+        },
+        {
+          "id": "e",
+          "text": "Pola kedatangan acak tanpa keteraturan sama sekali"
+        },
+        {
+          "id": "f",
+          "text": "Puncak kedatangan terjadi antara 15-5 menit sebelum bel masuk"
+        }
+      ],
+      "correct_answers": ["a", "d", "f"],
+      "explanation": "Pola yang valid: (a) Keterlambatan lebih tinggi hari Senin adalah pola temporal umum (Monday effect), (d) Kedatangan tercepat 30 menit sebelum bel adalah pola waktu yang masuk akal untuk siswa yang datang sangat awal, (f) Puncak kedatangan 15-5 menit sebelum bel adalah pola yang sangat umum karena siswa cenderung datang tepat waktu. Opsi lain tidak valid: tidak mungkin tidak ada perbedaan dengan hari libur, siswa jauh biasanya datang lebih awal adalah generalisasi yang tidak selalu benar, dan data terstruktur seperti presensi pasti memiliki pola."
+    },
+    
+    {
+      "id": "pol_l2_q5",
+      "type": "multiple_choices",
+      "content": "Dalam menganalisis data peminjaman 500 buku perpustakaan selama 3 bulan, pengenalan pola dapat membantu mengidentifikasi: (Pilih semua yang benar)",
+      "hint": "Pilih semua insight yang dapat ditemukan melalui analisis pola",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buku dengan genre paling populer"
+        },
+        {
+          "id": "b",
+          "text": "Pola peminjaman berdasarkan hari dalam seminggu"
+        },
+        {
+          "id": "c",
+          "text": "Keterkaitan antara rating buku dan frekuensi peminjaman"
+        },
+        {
+          "id": "d",
+          "text": "Perbedaan pola peminjaman antara siswa kelas X, XI, dan XII"
+        },
+        {
+          "id": "e",
+          "text": "Waktu rata-rata pengembalian buku untuk setiap genre"
+        },
+        {
+          "id": "f",
+          "text": "Pola musiman (bulan ujian vs bulan biasa)"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d", "e", "f"],
+      "explanation": "Semua opsi adalah pola valid yang dapat diidentifikasi dari data peminjaman perpustakaan: (a) Genre populer - pola kategori, (b) Pola berdasarkan hari - pola temporal mingguan, (c) Rating vs frekuensi - pola korelasi, (d) Perbedaan antar kelas - pola segmentasi demografis, (e) Waktu pengembalian per genre - pola durasi berdasarkan kategori, (f) Pola musiman - pola temporal jangka panjang. Semua insight ini sangat berguna untuk manajemen perpustakaan dan peningkatan layanan."
+    },
+    
+    {
+      "id": "pol_l2_q6",
+      "type": "multiple_choices",
+      "content": "Data transaksi di koperasi sekolah (400 transaksi/bulan) dapat dianalisis untuk mengenali pola berikut: (Pilih semua yang benar)",
+      "hint": "Pilih pola yang realistis ditemukan dalam data transaksi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Produk yang sering dibeli bersamaan (misal: roti dan susu)"
+        },
+        {
+          "id": "b",
+          "text": "Waktu puncak pembelian (istirahat pertama vs kedua)"
+        },
+        {
+          "id": "c",
+          "text": "Perbedaan pola pembelian antara siswa putra dan putri"
+        },
+        {
+          "id": "d",
+          "text": "Pengaruh hari pembayaran uang saku terhadap total belanja"
+        },
+        {
+          "id": "e",
+          "text": "Tren penjualan produk baru selama bulan pertama"
+        },
+        {
+          "id": "f",
+          "text": "Pola pembelian yang sama persis setiap hari"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d", "e"],
+      "explanation": "Pola yang valid: (a) Produk dibeli bersamaan - market basket analysis yang sangat umum, (b) Waktu puncak pembelian - pola temporal harian, (c) Perbedaan gender - pola segmentasi demografis, (d) Pengaruh hari pembayaran - pola temporal dengan faktor eksternal, (e) Tren produk baru - pola adopsi dan perubahan. Opsi (f) tidak valid karena pola pembelian tidak mungkin sama persis setiap hari - selalu ada variasi natural dalam perilaku konsumen."
+    },
+    
+    {
+      "id": "pol_l2_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Sebuah penelitian tentang kebiasaan belajar 300 siswa menghasilkan data kompleks. Susunlah langkah-langkah analisis untuk mengenali pola yang bermakna.",
+      "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah analisis dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Mengelompokkan data berdasarkan variabel kunci (waktu belajar, durasi, lokasi)"
+        },
+        {
+          "id": "step_2",
+          "text": "Mencari korelasi antara kebiasaan belajar dengan nilai akademik"
+        },
+        {
+          "id": "step_3",
+          "text": "Mengumpulkan data dari log aplikasi belajar dan kuesioner"
+        },
+        {
+          "id": "step_4",
+          "text": "Mengidentifikasi pola umum (misal: belajar malam lebih efektif untuk pelajaran hafalan)"
+        },
+        {
+          "id": "step_5",
+          "text": "Membuat visualisasi data untuk melihat tren lebih jelas"
+        },
+        {
+          "id": "step_6",
+          "text": "Membersihkan data dari pencatatan yang tidak valid"
+        },
+        {
+          "id": "step_7",
+          "text": "Membuat rekomendasi berdasarkan pola yang ditemukan"
+        }
+      ],
+      "correct_order": ["step_3", "step_6", "step_1", "step_2", "step_4", "step_5", "step_7"],
+      "explanation": "Urutan analisis pola yang benar: (1) Mengumpulkan data - langkah awal pengumpulan raw data, (2) Membersihkan data - preprocessing untuk memastikan kualitas data, (3) Mengelompokkan berdasarkan variabel kunci - strukturisasi data untuk analisis, (4) Mencari korelasi - analisis hubungan antar variabel, (5) Mengidentifikasi pola umum - pattern recognition dari hasil korelasi, (6) Membuat visualisasi - representasi visual untuk validasi dan komunikasi pola, (7) Membuat rekomendasi - aplikasi praktis dari pola yang ditemukan."
+    },
+    
+    {
+      "id": "pol_l2_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan tipe data di kolom kiri dengan metode pengenalan pola yang paling tepat di kolom kanan:",
+      "instruction": "Pilih metode pengenalan pola yang paling sesuai untuk setiap tipe data.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Data waktu kedatangan siswa (300 siswa × 20 hari)"
+        },
+        {
+          "left_id": "2",
+          "left": "Data nilai 8 mata pelajaran untuk 200 siswa"
+        },
+        {
+          "left_id": "3",
+          "left": "Data transaksi koperasi (item yang dibeli bersama)"
+        },
+        {
+          "left_id": "4",
+          "left": "Data aktivitas di platform e-learning (klik, waktu, halaman)"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Analisis cluster untuk mengelompokkan siswa berdasarkan profil nilai"
+        },
+        {
+          "id": "B",
+          "text": "Analisis asosiasi untuk menemukan itemset yang sering muncul bersama"
+        },
+        {
+          "id": "C",
+          "text": "Analisis deret waktu untuk melihat tren dan pola periodik"
+        },
+        {
+          "id": "D",
+          "text": "Analisis jalur untuk memahami pola navigasi dan engagement"
+        }
+      ],
+      "correct_matches": {
+        "1": "C",
+        "2": "A",
+        "3": "B",
+        "4": "D"
+      },
+      "explanation": "Pasangan metode yang tepat: (1) Waktu kedatangan → Analisis deret waktu karena data berupa time series yang cocok untuk mengidentifikasi tren, seasonality, dan pola periodik, (2) Nilai mata pelajaran → Analisis cluster untuk mengelompokkan siswa dengan profil nilai serupa (misal: kelompok IPA kuat, IPS kuat, atau balanced), (3) Transaksi koperasi → Analisis asosiasi (market basket analysis) untuk menemukan produk yang sering dibeli bersamaan (association rules), (4) Aktivitas e-learning → Analisis jalur (path analysis) untuk memahami alur navigasi user, sequence of actions, dan pola engagement."
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+    "pillar": "algoritma",
+    "level": 3,
+    "points_per_question": 3,
+    "total_questions": 8,
+    "pass_threshold": 80,
+    "questions": [
+        {
+            "id": 1,
+            "type": "one_choice",
+            "content": "Sebuah sistem rekomendasi kursus online untuk 5.000 siswa perlu memproses data: riwayat belajar (10.000 kursus diselesaikan), preferensi (50.000 rating), dan profil (20 variabel per siswa). Kendala: harus memberikan rekomendasi real-time (< 2 detik). Strategi algoritmik yang PALING TEPAT adalah...",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Menggunakan collaborative filtering murni yang membandingkan semua siswa dengan semua kursus"
+                },
+                {
+                    "id": "b",
+                    "text": "Menggabungkan content-based filtering dengan preprocessing offline dan caching hasil"
+                },
+                {
+                    "id": "c",
+                    "text": "Memilih secara acak 10 kursus populer untuk semua siswa"
+                },
+                {
+                    "id": "d",
+                    "text": "Meminta setiap siswa mengisi kuesioner panjang sebelum memberikan rekomendasi"
+                }
+            ],
+            "correct_answer": "b",
+            "explanation": "Pendekatan hybrid dengan preprocessing offline dan caching adalah strategi paling tepat untuk constraint real-time: (1) Content-based filtering dapat diproses offline untuk membuat similarity matrix antar kursus, (2) User profile dapat di-precompute dan di-cache, (3) Pada query time, hanya perlu matching cepat antara cached profile dengan precomputed similarities, (4) Hasil populer dapat di-cache untuk response time sub-second. Collaborative filtering murni (a) terlalu lambat untuk 5.000×10.000 comparisons real-time. Random selection (c) mengabaikan personalisasi. Kuesioner panjang (d) menambah latency dan friction user experience. Kunci optimal algorithm untuk real-time constraint adalah memindahkan komputasi berat ke offline preprocessing."
+        },
+        {
+            "id": 2,
+            "type": "multiple_choices",
+            "content": "Sebuah sistem routing bus sekolah harus mengoptimalkan 10 rute untuk menjemput 1.200 siswa dari 800 lokasi berbeda dengan constraint: waktu tempuh maksimal 60 menit, kapasitas bus 50 siswa, dan waktu mulai sekolah tetap. Pertimbangan algoritmik yang relevan: (Pilih semua yang benar)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Masalah ini termasuk Traveling Salesman Problem (TSP) dengan multiple vehicles"
+                },
+                {
+                    "id": "b",
+                    "text": "Algoritma greedy sederhana cukup optimal untuk skala ini"
+                },
+                {
+                    "id": "c",
+                    "text": "Perlu heuristic seperti simulated annealing atau genetic algorithm"
+                },
+                {
+                    "id": "d",
+                    "text": "Kompleksitas eksponensial jika menyelesaikan secara eksak (brute force)"
+                },
+                {
+                    "id": "e",
+                    "text": "Dapat dipecah menjadi subproblem: clustering lokasi lalu routing per cluster"
+                },
+                {
+                    "id": "f",
+                    "text": "Waktu komputasi tidak penting karena hanya dihitung sekali seminggu"
+                }
+            ],
+            "correct_answers": ["a", "c", "d", "e"],
+            "explanation": "Pertimbangan algoritmik yang tepat: (a) Ini adalah Vehicle Routing Problem (VRP), varian TSP dengan multiple vehicles dan capacity constraints - NP-hard problem, (c) Heuristics essential untuk problem size ini - exact solution tidak feasible, simulated annealing/genetic algorithm proven effective untuk VRP, (d) Brute force memiliki kompleksitas O(n!) yang eksplisit impossible untuk 800 lokasi (800! >> usia universe), (e) Decomposition strategy effective: cluster-first route-second approach mengurangi complexity dramatically. Opsi b salah - greedy alone sering stuck di local optima untuk VRP complex. Opsi f misleading - meskipun tidak real-time, computational efficiency tetap penting untuk iterasi dan what-if scenarios, plus rute perlu re-optimasi saat ada perubahan."
+        },
+        {
+            "id": 3,
+            "type": "multiple_choices",
+            "content": "Dalam sistem penjadwalan ujian untuk 2.000 siswa dengan 50 mata pelajaran, 30 ruang, dan 5 hari, constraint meliputi: tidak ada siswa dengan 2 ujian bersamaan, guru tidak bisa di 2 tempat bersamaan, dan kapasitas ruang. Evaluasi pendekatan algoritmik berikut: (Pilih semua yang efektif)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Menggunakan constraint satisfaction dengan backtracking"
+                },
+                {
+                    "id": "b",
+                    "text": "Algoritma genetika dengan fitness function berdasarkan jumlah konflik"
+                },
+                {
+                    "id": "c",
+                    "text": "Pendekatan manual dengan spreadsheet karena lebih fleksibel"
+                },
+                {
+                    "id": "d",
+                    "text": "Memecah menjadi penjadwalan per tingkat kelas terlebih dahulu"
+                },
+                {
+                    "id": "e",
+                    "text": "Menggunakan graph coloring dengan siswa sebagai node dan ujian sebagai edges"
+                },
+                {
+                    "id": "f",
+                    "text": "Mengabaikan constraint kapasitas ruang untuk menyederhanakan masalah"
+                }
+            ],
+            "correct_answers": ["a", "b", "d", "e"],
+            "explanation": "Pendekatan algoritmik yang efektif: (a) Constraint Satisfaction Problem (CSP) dengan backtracking adalah framework natural untuk scheduling dengan hard constraints, dapat efficiently prune search space, (b) Genetic algorithm effective untuk optimization dengan soft constraints dan multiple objectives, fitness function dapat balance berbagai kriteria, (d) Decomposition per tingkat/jurusan mengurangi problem size dan mencegah cross-grade conflicts upfront, (e) Graph coloring adalah model matematis yang tepat - exams adalah nodes, edge menghubungkan exams yang tidak boleh concurrent, coloring adalah time slot assignment. Opsi c (manual) tidak scalable dan error-prone untuk 2.000 siswa×50 mata pelajaran. Opsi f (ignore capacity) akan menghasilkan solution infeasible - hard constraint cannot be ignored."
+        },
+        {
+            "id": 4,
+            "type": "multiple_choices",
+            "content": "Perhatikan analisis kompleksitas untuk algoritma pengolahan data nilai 3.000 siswa:\n\nAlgoritma A: O(n²) - Bubble Sort seluruh data\nAlgoritma B: O(n log n) - Merge Sort seluruh data\nAlgoritma C: O(n) - Hitung rata-rata dengan satu pass\nAlgoritma D: O(1) - Akses nilai spesifik dengan index hash\n\nDengan n = 3.000, evaluasi pernyataan berikut: (Pilih semua yang benar)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Untuk sorting, Algoritma B lebih efisien daripada A untuk n besar"
+                },
+                {
+                    "id": "b",
+                    "text": "Algoritma C optimal untuk perhitungan yang membutuhkan semua data"
+                },
+                {
+                    "id": "c",
+                    "text": "Algoritma D hanya cepat jika sudah ada struktur data yang tepat"
+                },
+                {
+                    "id": "d",
+                    "text": "Semua algoritma sama baiknya karena n hanya 3.000"
+                },
+                {
+                    "id": "e",
+                    "text": "Pertumbuhan O(n²) menjadi masalah jika n meningkat ke 30.000"
+                },
+                {
+                    "id": "f",
+                    "text": "Untuk tugas berbeda, kompleksitas yang berbeda menjadi optimal"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "e", "f"],
+            "explanation": "Analisis kompleksitas yang benar: (a) O(n log n) vs O(n²) - untuk n=3.000: Bubble Sort ~9M operasi vs Merge Sort ~30K operasi, perbedaan 300x, (b) O(n) optimal untuk single-pass computation karena tidak bisa lebih cepat dari membaca semua data sekali, (c) O(1) access memerlukan hash table atau array dengan direct indexing yang sudah di-setup - ada preprocessing cost, (e) Scaling ke n=30.000: O(n²) menjadi ~900M operasi (100x slower), O(n log n) hanya ~450K operasi (15x slower) - quadratic growth menjadi bottleneck severe, (f) Algorithm complexity depends on task - tidak ada 'best' universal, sorting needs O(n log n) minimum, search dapat O(1) dengan structure tepat, aggregation needs O(n) minimum. Opsi d salah - bahkan untuk n=3.000, perbedaan algoritma significant dalam praktik."
+        },
+        {
+            "id": 5,
+            "type": "multiple_choices",
+            "content": "Sebuah sistem deteksi plagiarisme untuk 10.000 tugas siswa perlu membandingkan setiap dokumen dengan semua dokumen lainnya. Dengan rata-rata 1.000 kata per dokumen, pendekatan algoritmik yang scalable meliputi: (Pilih semua yang tepat)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Fingerprinting dengan hashing shingle (potongan teks) untuk mengurangi dimensi"
+                },
+                {
+                    "id": "b",
+                    "text": "Inverted index untuk pencocokan cepat frasa umum"
+                },
+                {
+                    "id": "c",
+                    "text": "Cosine similarity pada vector space model dengan dimensionality reduction"
+                },
+                {
+                    "id": "d",
+                    "text": "Perbandingan berpasangan lengkap (pairwise comparison) semua dokumen"
+                },
+                {
+                    "id": "e",
+                    "text": "Sampling acak 10% dokumen untuk perbandingan"
+                },
+                {
+                    "id": "f",
+                    "text": "Clustering dokumen berdasarkan topik sebelum perbandingan intra-cluster"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "f"],
+            "explanation": "Pendekatan scalable untuk plagiarism detection: (a) Shingling + MinHash fingerprinting mengurangi dokumen 1.000 kata ke signature compact (misal 100 hash values), membuat comparison O(1) vs O(1000), teknik proven untuk duplicate detection at scale, (b) Inverted index memungkinkan quickly find documents sharing rare phrases - common phrases di-filter, rare phrases adalah strong signals, (c) Vector space model + dimensionality reduction (LSA/Word2Vec) menangkap semantic similarity, bukan hanya exact matching, TF-IDF weighting mengurangi noise dari common words, (f) Clustering dengan topic modeling mengurangi comparison space dramatically - hanya compare within-cluster, unlikely plagiarism across disparate topics. Opsi d (full pairwise) adalah O(n²) = 50M comparisons untuk 10K documents - computationally prohibitive tanpa optimization. Opsi e (random sampling) berisiko miss plagiarism cases - tidak acceptable untuk academic integrity system."
+        },
+        {
+            "id": 6,
+            "type": "drag_drop",
+            "drag_drop_type": "sequence",
+            "content": "Rancang pipeline algoritmik untuk sistem analisis sentimen real-time dari 50.000 post media sosial komunitas sekolah.",
+            "instruction": "Klik dan drag item untuk mengurutkan dari input hingga output.",
+            "items": [
+                {
+                    "id": "step1",
+                    "text": "Input: streaming data dari API media sosial"
+                },
+                {
+                    "id": "step2",
+                    "text": "Data cleaning: remove spam, normalisasi teks, tokenisasi"
+                },
+                {
+                    "id": "step3",
+                    "text": "Feature extraction: n-gram, emoji analysis, negation handling"
+                },
+                {
+                    "id": "step4",
+                    "text": "Topic modeling: LDA atau sejenis untuk identifikasi tema"
+                },
+                {
+                    "id": "step5",
+                    "text": "Model inference: klasifikasi sentimen (positif/netral/negatif)"
+                },
+                {
+                    "id": "step6",
+                    "text": "Aggregation: grouping by topic, time window, user segment"
+                },
+                {
+                    "id": "step7",
+                    "text": "Anomaly detection: identifikasi spike dalam sentimen negatif"
+                },
+                {
+                    "id": "step8",
+                    "text": "Output: dashboard dengan trending topics dan sentimen aggregate"
+                }
+            ],
+            "correct_order": ["step1", "step2", "step3", "step4", "step5", "step6", "step7", "step8"],
+            "explanation": "Pipeline algoritmik yang optimal untuk sentiment analysis real-time: (1) Input streaming - continuous data ingestion dari social media APIs, (2) Data cleaning - preprocessing essential: remove noise (spam, bots), normalize (lowercase, remove special chars), tokenize untuk analysis, (3) Feature extraction - extract meaningful signals: n-grams untuk context, emoji sebagai sentiment indicator, negation handling (\"not good\" ≠ \"good\"), (4) Topic modeling - identify themes untuk contextual sentiment (negative sentiment tentang kantin ≠ tentang ujian), (5) Model inference - classify sentiment per post menggunakan pre-trained model (BERT/DistilBERT untuk accuracy vs latency tradeoff), (6) Aggregation - summarize patterns: per topic, time windows (hourly/daily), user segments (siswa/guru/orangtua), (7) Anomaly detection - identify unusual spikes yang require immediate attention (sudden surge negative sentiment = potential issue/crisis), (8) Output - actionable dashboard dengan visualizations dan alerts untuk stakeholders. Pipeline balance antara accuracy, latency, dan actionability."
+        },
+        {
+            "id": 7,
+            "type": "drag_drop",
+            "drag_drop_type": "matching",
+            "content": "Sebuah sistem matching untuk program mentor-mentee melibatkan 800 mentor dan 1.200 mentee dengan 20 kriteria kecocokan (minat, jadwal, pengalaman, dll.). Pasangkan setiap teknik algoritmik dengan manfaatnya.",
+            "instruction": "Pilih manfaat utama yang paling sesuai untuk setiap teknik algoritmik.",
+            "pairs": [
+                {
+                    "left_id": "1",
+                    "left": "Stable Marriage Algorithm (Gale-Shapley)"
+                },
+                {
+                    "left_id": "2",
+                    "left": "Multi-objective Optimization"
+                },
+                {
+                    "left_id": "3",
+                    "left": "Collaborative Filtering"
+                },
+                {
+                    "left_id": "4",
+                    "left": "Constraint Programming"
+                }
+            ],
+            "right_items": [
+                {
+                    "id": "A",
+                    "text": "Menangani trade-off antara berbagai kriteria yang saling bertentangan"
+                },
+                {
+                    "id": "B",
+                    "text": "Menjamin tidak ada pasangan yang lebih suka pasangan lain (stability)"
+                },
+                {
+                    "id": "C",
+                    "text": "Merekomendasikan berdasarkan kemiripan dengan matching sukses sebelumnya"
+                },
+                {
+                    "id": "D",
+                    "text": "Memastikan semua constraint hard terpenuhi sebelum optimasi"
+                }
+            ],
+            "correct_matches": {
+                "1": "B",
+                "2": "A",
+                "3": "C",
+                "4": "D"
+            },
+            "explanation": "Pasangan teknik algoritmik dengan manfaatnya: (1-B) Stable Marriage Algorithm menjamin stability - tidak ada mentor-mentee pair yang keduanya prefer pasangan lain, mencegah regret dan switching, proven O(n²) solution untuk two-sided matching, (2-A) Multi-objective optimization menangani multiple conflicting criteria (minat match vs jadwal compatibility vs experience gap) dengan Pareto optimality, menghasilkan diverse solutions pada tradeoff frontier, (3-C) Collaborative filtering learns dari historical data - \"mentor yang cocok untuk mentee dengan profile serupa\" - leverages wisdom of crowds, especially useful dengan data program sebelumnya, (4-D) Constraint programming ensures hard constraints satisfied first (misal: mentor max 2 mentees, no gender preference violations, availability overlap minimum) sebelum optimize soft preferences, declarative approach yang flexible untuk complex rules."
+        },
+        {
+            "id": 8,
+            "type": "drag_drop",
+            "drag_drop_type": "sequence",
+            "content": "Desain arsitektur algoritmik untuk sistem prediksi performa akademik yang scalable. Susun komponen berikut menjadi sistem yang koheren.",
+            "instruction": "Klik dan drag item untuk menyusun dari data sources hingga actionable output.",
+            "items": [
+                {
+                    "id": "layer1",
+                    "text": "Data Sources: LMS, assessment, attendance, demographic"
+                },
+                {
+                    "id": "layer2",
+                    "text": "Data Pipeline: batch & stream processing, data validation"
+                },
+                {
+                    "id": "layer3",
+                    "text": "Feature Engineering: selection, transformation, creation"
+                },
+                {
+                    "id": "layer4",
+                    "text": "Prediction Models: ensemble of classifiers dengan weighted voting"
+                },
+                {
+                    "id": "layer5",
+                    "text": "Interpretability: SHAP values, feature importance, counterfactuals"
+                },
+                {
+                    "id": "layer6",
+                    "text": "Monitoring & Feedback: model drift detection, performance metrics"
+                },
+                {
+                    "id": "layer7",
+                    "text": "Serving Layer: API untuk real-time prediction dan batch reporting"
+                },
+                {
+                    "id": "layer8",
+                    "text": "Actionable Output: risk score, intervention recommendation, early warning"
+                }
+            ],
+            "correct_order": ["layer1", "layer2", "layer3", "layer4", "layer5", "layer6", "layer7", "layer8"],
+            "explanation": "Arsitektur algoritmik yang koheren dan scalable: (1) Data Sources - multi-source data ingestion dari berbagai sistem, foundation untuk prediction, (2) Data Pipeline - batch processing untuk historical data, stream processing untuk real-time updates, validation untuk data quality assurance, (3) Feature Engineering - critical step: select relevant features (correlation analysis, domain knowledge), transform (scaling, encoding), create derived features (engagement metrics, trend features), (4) Prediction Models - ensemble approach (Random Forest + Gradient Boosting + Neural Net) dengan weighted voting reduces overfitting dan improves robustness, (5) Interpretability - SHAP values explain individual predictions, feature importance shows global patterns, counterfactuals provide actionable what-if insights (\"jika attendance +10%, risk turun 15%\"), (6) Monitoring & Feedback - detect model drift (performance degradation over time), track metrics (precision, recall, false positive rate), trigger retraining, (7) Serving Layer - production deployment dengan API untuk real-time queries dan scheduled batch reports, scalable infrastructure, (8) Actionable Output - translate predictions ke actionable insights: risk scores categorized, specific intervention recommendations, automated early warning alerts untuk stakeholders. End-to-end system dari data ke impact."
+        }
+    ]
+}

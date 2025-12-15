@@ -1,0 +1,308 @@
+{
+  "pillar": "dekomposisi",
+  "level": 3,
+  "points_per_question": 3,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Level 3 berisi soal-soal dengan kompleksitas tertinggi yang membutuhkan pemikiran kritis dan analisis mendalam. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "dek_l3_q1",
+      "type": "one_choice",
+      "content": "Sebuah platform e-learning sekolah mencatat data interaksi 800 siswa dengan materi pembelajaran selama satu semester. Data termasuk: waktu akses, durasi belajar, materi yang diakses, kuis yang dikerjakan, dan nilai kuis. Manakah pendekatan dekomposisi yang PALING efektif untuk menganalisis data ini guna meningkatkan kualitas pembelajaran?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menganalisis semua data sekaligus tanpa pengelompokan khusus"
+        },
+        {
+          "id": "b",
+          "text": "Memisahkan analisis berdasarkan aspek: pola waktu belajar, efektivitas materi, hubungan durasi belajar dengan nilai"
+        },
+        {
+          "id": "c",
+          "text": "Hanya fokus pada data 100 siswa dengan nilai tertinggi"
+        },
+        {
+          "id": "d",
+          "text": "Menggabungkan semua variabel menjadi satu skor \"engagement\" tunggal"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Pendekatan dekomposisi multi-aspek adalah yang paling efektif untuk data kompleks ini. Dengan memisahkan analisis menjadi: (1) pola waktu belajar - mengidentifikasi kapan siswa paling efektif belajar, (2) efektivitas materi - mengevaluasi materi mana yang paling/kurang engaging, (3) hubungan durasi-nilai - mengukur korelasi antara waktu belajar dan performa, kita mendapatkan insight spesifik dan actionable untuk setiap dimensi. Pendekatan ini memungkinkan intervensi targeted untuk meningkatkan kualitas pembelajaran, berbeda dengan analisis menyeluruh yang terlalu general atau fokus pada subset data yang tidak representatif."
+    },
+    
+    {
+      "id": "dek_l3_q2",
+      "type": "multiple_choices",
+      "content": "Sebuah sistem sensor di laboratorium menghasilkan 1.000 data pengukuran suhu per hari selama 30 hari (total 30.000 data). Data perlu dianalisis untuk pola anomali. Strategi dekomposisi yang TEPAT untuk menangani volume data ini adalah... (Pilih semua yang benar)",
+      "hint": "Pilih strategi yang memecah data menjadi bagian bermakna tanpa kehilangan informasi penting",
+      "options": [
+        {
+          "id": "a",
+          "text": "Membagi data berdasarkan hari (analisis 30 hari terpisah)"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan data berdasarkan rentang waktu dalam sehari (pagi, siang, sore, malam)"
+        },
+        {
+          "id": "c",
+          "text": "Menggunakan sistem sampling acak 10% dari total data"
+        },
+        {
+          "id": "d",
+          "text": "Membuat subset data berdasarkan nilai suhu (normal vs ekstrem)"
+        },
+        {
+          "id": "e",
+          "text": "Menganalisis tren mingguan daripada harian"
+        },
+        {
+          "id": "f",
+          "text": "Mengabaikan data di bawah dan di atas rata-rata untuk menyederhanakan analisis"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "e"],
+      "explanation": "Strategi dekomposisi yang tepat: (a) Membagi per hari memungkinkan analisis temporal dan identifikasi hari dengan anomali, (b) Pengelompokan berdasarkan waktu dalam sehari mengidentifikasi pola diurnal dan periode berisiko, (d) Subset berdasarkan nilai suhu memfokuskan analisis pada data anomali yang kritis, (e) Tren mingguan memberikan perspektif lebih luas untuk pola periodik. Sampling acak 10% berisiko melewatkan anomali langka yang justru penting untuk dideteksi. Mengabaikan data di luar rata-rata menghilangkan informasi anomali yang justru menjadi tujuan analisis."
+    },
+    
+    {
+      "id": "dek_l3_q3",
+      "type": "multiple_choices",
+      "content": "Dalam merancang sistem pendaftaran online untuk 1.200 calon peserta Olimpiade Sains, dekomposisi dapat diterapkan pada beberapa level. Manakah yang merupakan penerapan dekomposisi yang baik? (Pilih semua yang benar)",
+      "hint": "Pilih pendekatan yang memecah sistem menjadi komponen terkelola dan bermakna",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memisahkan proses menjadi: registrasi, upload berkas, verifikasi, pembayaran, konfirmasi"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan peserta berdasarkan bidang lomba (Matematika, Fisika, Kimia, Biologi, Komputer)"
+        },
+        {
+          "id": "c",
+          "text": "Membuat subsistem terpisah untuk sekolah negeri dan swasta"
+        },
+        {
+          "id": "d",
+          "text": "Membagi alur berdasarkan tahap: pra-pendaftaran, pendaftaran utama, pasca-pendaftaran"
+        },
+        {
+          "id": "e",
+          "text": "Menetapkan timeline berbeda untuk setiap jenjang (SMP dan SMA)"
+        },
+        {
+          "id": "f",
+          "text": "Membuat satu formulir panjang yang mencakup semua informasi sekaligus"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "e"],
+      "explanation": "Dekomposisi yang baik: (a) Pemisahan proses menjadi tahapan sequential memudahkan tracking dan troubleshooting, (b) Pengelompokan berdasarkan bidang lomba memfasilitasi manajemen peserta dan penjadwalan, (d) Pembagian tahap temporal memberikan struktur workflow yang jelas, (e) Timeline berbeda per jenjang mengakomodasi kebutuhan spesifik setiap level. Subsistem terpisah negeri-swasta tidak perlu karena prosesnya sama. Formulir panjang tunggal bertentangan dengan prinsip dekomposisi yang menganjurkan pemecahan menjadi bagian-bagian terkelola."
+    },
+    
+    {
+      "id": "dek_l3_q4",
+      "type": "multiple_choices",
+      "content": "Perhatikan pseudocode sederhana untuk analisis data nilai 600 siswa:\nA. BACA data_nilai[600]\nB. PISAHKAN data berdasarkan mata_pelajaran\nC. UNTUK setiap mata_pelajaran:\n     - HITUNG rata_rata\n     - CARI nilai_tertinggi dan nilai_terendah\n     - HITUNG jumlah_siswa_diatas_KKM\nD. BUAT laporan per mata_pelajaran\nE. KOMBINASIKAN laporan menjadi analisis_menyeluruh\n\nPrinsip dekomposisi yang tercermin dalam pseudocode tersebut adalah... (Pilih semua yang benar)",
+      "hint": "Analisis bagaimana masalah besar dipecah dan diselesaikan",
+      "options": [
+        {
+          "id": "a",
+          "text": "Masalah besar (analisis 600 siswa) dipecah menjadi sub-masalah (analisis per mata pelajaran)"
+        },
+        {
+          "id": "b",
+          "text": "Setiap sub-masalah dapat diselesaikan secara independen"
+        },
+        {
+          "id": "c",
+          "text": "Hasil dari sub-masalah dikombinasikan untuk solusi menyeluruh"
+        },
+        {
+          "id": "d",
+          "text": "Proses berjalan linear tanpa pengulangan"
+        },
+        {
+          "id": "e",
+          "text": "Tidak diperlukan pengelompokan data awal"
+        },
+        {
+          "id": "f",
+          "text": "Semua perhitungan dilakukan sekaligus pada semua data"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "Prinsip dekomposisi dalam pseudocode: (a) Masalah besar dipecah per mata pelajaran - divide step yang jelas, (b) Setiap mata pelajaran dianalisis independen - modularitas, (c) Hasil dikombinasikan untuk solusi menyeluruh - conquer step, (d) Proses linear tanpa pengulangan kompleks - algoritma straightforward. Step B jelas melakukan pengelompokan data, sehingga opsi (e) salah. Perhitungan dilakukan per mata pelajaran, bukan sekaligus semua data, sehingga opsi (f) salah. Pseudocode ini adalah contoh sempurna divide-and-conquer approach dalam dekomposisi."
+    },
+    
+    {
+      "id": "dek_l3_q5",
+      "type": "multiple_choices",
+      "content": "Sebuah penelitian tentang kebiasaan makan 500 siswa menghasilkan data kompleks: jenis makanan, waktu makan, tempat makan, biaya, dan nilai gizi. Untuk membuat rekomendasi kebijakan kantin sekolah, evaluasilah pendekatan dekomposisi berikut mana yang EFEKTIF dan mana yang KURANG EFEKTIF: (Pilih semua yang EFEKTIF)",
+      "hint": "Pilih pendekatan yang menghasilkan insight actionable tanpa oversimplifikasi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Analisis terpisah: pola makan pagi vs siang, preferensi makanan, analisis gizi, pola pengeluaran"
+        },
+        {
+          "id": "b",
+          "text": "Membuat kategori siswa berdasarkan pola makan: sehat, sedang, kurang sehat"
+        },
+        {
+          "id": "c",
+          "text": "Hanya menganalisis data makanan yang dijual di kantin sekolah"
+        },
+        {
+          "id": "d",
+          "text": "Mengelompokkan berdasarkan tingkat pengeluaran saja"
+        },
+        {
+          "id": "e",
+          "text": "Analisis korelasi antara pola makan dengan performa akademik (jika data tersedia)"
+        },
+        {
+          "id": "f",
+          "text": "Membuat rekomendasi berdasarkan satu kriteria tunggal (misal: harga termurah)"
+        }
+      ],
+      "correct_answers": ["a", "b", "e"],
+      "explanation": "Pendekatan efektif: (a) Analisis multi-dimensi terpisah memberikan insight komprehensif untuk setiap aspek kebijakan kantin, (b) Kategorisasi siswa memungkinkan intervensi targeted berdasarkan profil pola makan, (e) Analisis korelasi dengan performa akademik memberikan justifikasi kuat untuk kebijakan berbasis evidence. Pendekatan kurang efektif: (c) membatasi hanya makanan kantin mengabaikan kompetisi dan preferensi eksternal, (d) fokus hanya pengeluaran mengabaikan aspek gizi dan preferensi, (f) single-criteria oversimplifikasi masalah kompleks yang memerlukan balanced approach."
+    },
+    
+    {
+      "id": "dek_l3_q6",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Sebuah sistem monitoring energi sekolah menghasilkan 50.000 data pemakaian listrik per bulan dari 100 sensor. Data perlu dianalisis untuk program penghematan energi. Susunlah strategi dekomposisi yang logis untuk menangani data volume besar ini.",
+      "instruction": "Klik dan drag item untuk mengurutkan strategi dekomposisi dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Identifikasi area dengan konsumsi energi tertinggi (lab, ruang komputer, AC)"
+        },
+        {
+          "id": "step_2",
+          "text": "Analisis pola pemakaian harian dan mingguan untuk setiap area prioritas"
+        },
+        {
+          "id": "step_3",
+          "text": "Implementasi solusi penghematan dan monitoring lanjutan"
+        },
+        {
+          "id": "step_4",
+          "text": "Pisahkan data berdasarkan lokasi sensor (gedung A, B, C, lapangan)"
+        },
+        {
+          "id": "step_5",
+          "text": "Bandingkan pemakaian energi sebelum dan setelah jam sekolah"
+        },
+        {
+          "id": "step_6",
+          "text": "Buat rekomendasi spesifik per area berdasarkan analisis pola"
+        },
+        {
+          "id": "step_7",
+          "text": "Kelompokkan sensor berdasarkan jenis beban (penerangan, AC, peralatan elektronik)"
+        }
+      ],
+      "correct_order": ["step_4", "step_7", "step_1", "step_2", "step_5", "step_6", "step_3"],
+      "explanation": "Strategi dekomposisi sistematis: (1) Pisahkan berdasarkan lokasi - dekomposisi spasial awal untuk manageability, (2) Kelompokkan berdasarkan jenis beban - dekomposisi fungsional untuk analisis homogen, (3) Identifikasi area konsumsi tertinggi - prioritisasi untuk fokus resource, (4) Analisis pola harian/mingguan per area - deep dive temporal pada prioritas, (5) Bandingkan jam sekolah vs non-sekolah - identifikasi waste dan inefficiency, (6) Buat rekomendasi spesifik - actionable insights per area, (7) Implementasi dan monitoring - eksekusi dan continuous improvement. Pendekatan ini menggunakan dekomposisi bertingkat: lokasi → jenis → prioritas → analisis detail → aksi."
+    },
+    
+    {
+      "id": "dek_l3_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Sebuah aplikasi donasi buku untuk perpustakaan desa menerima 2.000 buku dari berbagai donor. Buku perlu dikategorikan, dinilai kondisi, dan didistribusikan. Pasangkan setiap tahap pengelolaan dengan pendekatan dekomposisi yang tepat.",
+      "instruction": "Pilih pendekatan dekomposisi yang paling sesuai untuk setiap tahap pengelolaan.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Kategorisasi buku"
+        },
+        {
+          "left_id": "2",
+          "left": "Penilaian kondisi fisik"
+        },
+        {
+          "left_id": "3",
+          "left": "Penyortiran berdasarkan prioritas distribusi"
+        },
+        {
+          "left_id": "4",
+          "left": "Pembuatan database digital"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Buat skala kondisi: baik, rusak ringan, rusak berat; evaluasi per kategori"
+        },
+        {
+          "id": "B",
+          "text": "Kelompokkan berdasarkan: kategori usia pembaca, genre, bahasa"
+        },
+        {
+          "id": "C",
+          "text": "Prioritaskan berdasarkan: kondisi buku, relevansi dengan kebutuhan, kelengkapan"
+        },
+        {
+          "id": "D",
+          "text": "Pisahkan data: metadata buku, kondisi, lokasi penyimpanan, status distribusi"
+        }
+      ],
+      "correct_matches": {
+        "1": "B",
+        "2": "A",
+        "3": "C",
+        "4": "D"
+      },
+      "explanation": "Pasangan dekomposisi yang tepat: (1) Kategorisasi buku → Kelompokkan berdasarkan usia, genre, bahasa untuk memudahkan matching dengan kebutuhan perpustakaan target, (2) Penilaian kondisi → Skala kondisi terstruktur untuk konsistensi evaluasi dan keputusan repair/disposal, (3) Penyortiran prioritas → Multi-kriteria (kondisi, relevansi, kelengkapan) untuk optimasi distribusi berbasis kebutuhan, (4) Database digital → Dekomposisi data menjadi dimensi terpisah (metadata, kondisi, lokasi, status) untuk query flexibility dan tracking. Setiap tahap menggunakan dekomposisi spesifik yang sesuai dengan nature dan tujuan tahap tersebut."
+    },
+    
+    {
+      "id": "dek_l3_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Rancang alur dekomposisi untuk sistem analisis data kesehatan 1.000 siswa (tinggi badan, berat badan, riwayat sakit, aktivitas fisik) guna membuat program \"Sekolah Sehat\". Susun komponen berikut menjadi struktur hierarkis yang logis.",
+      "instruction": "Klik dan drag item untuk menyusun struktur dari level terluas ke terspesifik (top-down decomposition).",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Analisis Indeks Massa Tubuh (IMT) per kelompok usia"
+        },
+        {
+          "id": "step_2",
+          "text": "Pengelompokan data berdasarkan jenjang kelas (X, XI, XII)"
+        },
+        {
+          "id": "step_3",
+          "text": "Rekomendasi program: kantin sehat, ekstrakurikuler olahraga, edukasi gizi"
+        },
+        {
+          "id": "step_4",
+          "text": "Identifikasi tren masalah kesehatan dominan"
+        },
+        {
+          "id": "step_5",
+          "text": "Analisis pola aktivitas fisik harian"
+        },
+        {
+          "id": "step_6",
+          "text": "Evaluasi hubungan antara kondisi kesehatan dengan prestasi akademik"
+        },
+        {
+          "id": "step_7",
+          "text": "Kategorisasi status gizi: kurang, normal, lebih, obesitas"
+        }
+      ],
+      "correct_order": ["step_2", "step_4", "step_5", "step_1", "step_7", "step_6", "step_3"],
+      "explanation": "Struktur hierarkis dekomposisi top-down: LEVEL 1 - Pengelompokan jenjang kelas (segmentasi populasi terluas), LEVEL 2 - Identifikasi tren masalah kesehatan dominan dan Analisis pola aktivitas fisik (overview masalah di setiap segmen), LEVEL 3 - Analisis IMT per kelompok usia, Kategorisasi status gizi, dan Evaluasi hubungan kesehatan-akademik (analisis spesifik multi-dimensi), LEVEL 4 - Rekomendasi program konkret (output actionable paling spesifik). Struktur ini mengikuti prinsip dekomposisi dari general ke specific, memungkinkan setiap level memberikan insight yang semakin detail dan targeted untuk pengambilan keputusan program Sekolah Sehat."
+    }
+  ]
+}

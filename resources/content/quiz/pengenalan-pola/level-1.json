@@ -1,0 +1,272 @@
+{
+  "pillar": "pengenalan-pola",
+  "level": 1,
+  "points_per_question": 1,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "pol_l1_q1",
+      "type": "one_choice",
+      "content": "Apa yang dimaksud dengan pengenalan pola dalam berpikir komputasional?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memecah masalah besar menjadi bagian-bagian kecil"
+        },
+        {
+          "id": "b",
+          "text": "Mengidentifikasi kesamaan dan keteraturan dalam data atau informasi"
+        },
+        {
+          "id": "c",
+          "text": "Menyaring informasi penting dan mengabaikan yang tidak relevan"
+        },
+        {
+          "id": "d",
+          "text": "Membuat urutan langkah-langkah untuk menyelesaikan masalah"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Pengenalan pola adalah proses mengidentifikasi kesamaan dan keteraturan dalam data atau informasi. Kemampuan ini membantu kita menemukan hubungan dan tren yang dapat digunakan untuk memahami data dengan lebih baik dan membuat prediksi."
+    },
+    
+    {
+      "id": "pol_l1_q2",
+      "type": "one_choice",
+      "content": "Contoh kegiatan sehari-hari yang melibatkan pengenalan pola adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Membuat daftar belanja berdasarkan kebutuhan"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan pakaian berdasarkan warna di lemari"
+        },
+        {
+          "id": "c",
+          "text": "Membagi waktu belajar untuk beberapa mata pelajaran"
+        },
+        {
+          "id": "d",
+          "text": "Menyusun prioritas tugas dari yang paling penting"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Mengelompokkan pakaian berdasarkan warna di lemari adalah contoh pengenalan pola karena kita mengidentifikasi kesamaan (warna) dan mengelompokkan item berdasarkan pola tersebut. Ini membantu kita mengorganisir dan menemukan barang dengan lebih mudah."
+    },
+    
+    {
+      "id": "pol_l1_q3",
+      "type": "one_choice",
+      "content": "Dalam konteks data, pola dapat berupa...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hanya angka-angka yang berurutan"
+        },
+        {
+          "id": "b",
+          "text": "Perulangan, tren, kesamaan, atau struktur tertentu"
+        },
+        {
+          "id": "c",
+          "text": "Data yang acak tanpa keteraturan"
+        },
+        {
+          "id": "d",
+          "text": "Informasi yang disimpan dalam format tabel saja"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Pola dalam konteks data bisa berupa perulangan (repetisi), tren (kecenderungan naik/turun), kesamaan (karakteristik serupa), atau struktur tertentu (pengaturan yang konsisten). Pola tidak terbatas pada angka saja, tetapi juga bisa ditemukan dalam berbagai jenis data."
+    },
+    
+    {
+      "id": "pol_l1_q4",
+      "type": "one_choice",
+      "content": "Mengapa pengenalan pola penting dalam pengolahan data?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Karena membuat data menjadi lebih banyak"
+        },
+        {
+          "id": "b",
+          "text": "Karena membantu menemukan keteraturan yang memudahkan analisis"
+        },
+        {
+          "id": "c",
+          "text": "Karena menghilangkan data yang tidak penting"
+        },
+        {
+          "id": "d",
+          "text": "Karena mempercepat proses input data"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Pengenalan pola penting karena membantu menemukan keteraturan yang memudahkan analisis data. Dengan mengenali pola, kita dapat memahami struktur data, membuat prediksi, mengidentifikasi anomali, dan mengambil keputusan yang lebih baik berdasarkan informasi yang ada."
+    },
+    
+    {
+      "id": "pol_l1_q5",
+      "type": "multiple_choices",
+      "content": "Manakah dari situasi berikut yang melibatkan pengenalan pola? (Pilih semua yang benar)",
+      "hint": "Pilih semua jawaban yang menunjukkan identifikasi kesamaan atau keteraturan",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mengamati bahwa nilai matematika siswa cenderung turun sebelum ujian"
+        },
+        {
+          "id": "b",
+          "text": "Menyadari bahwa halaman buku selalu dimulai dengan nomor ganjil"
+        },
+        {
+          "id": "c",
+          "text": "Membagi siswa menjadi kelompok berdasarkan tinggi badan"
+        },
+        {
+          "id": "d",
+          "text": "Menemukan bahwa kebanyakan siswa terlambat pada hari Senin"
+        },
+        {
+          "id": "e",
+          "text": "Menghitung rata-rata nilai seluruh kelas"
+        },
+        {
+          "id": "f",
+          "text": "Mengelompokkan kata dalam teks berdasarkan jumlah huruf"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "f"],
+      "explanation": "Situasi yang melibatkan pengenalan pola adalah: (a) mengamati tren nilai sebelum ujian - pola waktu, (b) menyadari aturan nomor halaman ganjil - pola numerik, (d) menemukan keteraturan keterlambatan hari Senin - pola waktu, dan (f) mengelompokkan kata berdasarkan jumlah huruf - pola kategori. Sedangkan membagi kelompok dan menghitung rata-rata bukan merupakan aktivitas pengenalan pola."
+    },
+    
+    {
+      "id": "pol_l1_q6",
+      "type": "multiple_choices",
+      "content": "Jenis-jenis pola yang umum ditemukan dalam data adalah... (Pilih semua yang benar)",
+      "hint": "Pilih semua jenis pola yang memiliki keteraturan",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pola numerik (contoh: 2, 4, 6, 8, ...)"
+        },
+        {
+          "id": "b",
+          "text": "Pola kategori (contoh: merah, biru, merah, biru, ...)"
+        },
+        {
+          "id": "c",
+          "text": "Pola spasial (contoh: susunan kursi di kelas)"
+        },
+        {
+          "id": "d",
+          "text": "Pola waktu (contoh: jam sibuk di kantin sekolah)"
+        },
+        {
+          "id": "e",
+          "text": "Pola acak (tidak ada keteraturan sama sekali)"
+        },
+        {
+          "id": "f",
+          "text": "Pola tunggal (hanya terjadi sekali)"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "Jenis pola yang umum ditemukan adalah: (a) Pola numerik - urutan angka dengan aturan tertentu, (b) Pola kategori - pengulangan kategori atau kelompok, (c) Pola spasial - pengaturan dalam ruang/posisi, dan (d) Pola waktu - keteraturan yang terkait waktu. Pola acak dan pola tunggal bukan merupakan pola karena tidak memiliki keteraturan atau pengulangan."
+    },
+    
+    {
+      "id": "pol_l1_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Susunlah langkah-langkah dasar dalam proses pengenalan pola berikut dari langkah pertama hingga terakhir:",
+      "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah pengenalan pola.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Mengumpulkan data atau informasi"
+        },
+        {
+          "id": "step_2",
+          "text": "Mengamati dan mencari keteraturan"
+        },
+        {
+          "id": "step_3",
+          "text": "Mencatat pola yang berulang"
+        },
+        {
+          "id": "step_4",
+          "text": "Mengidentifikasi jenis pola yang ditemukan"
+        },
+        {
+          "id": "step_5",
+          "text": "Membuat kesimpulan berdasarkan pola yang ditemukan"
+        },
+        {
+          "id": "step_6",
+          "text": "Menerapkan pengetahuan pola untuk prediksi atau pengambilan keputusan"
+        }
+      ],
+      "correct_order": ["step_1", "step_2", "step_3", "step_4", "step_5", "step_6"],
+      "explanation": "Proses pengenalan pola dimulai dengan: (1) Mengumpulkan data - fondasi untuk analisis, (2) Mengamati dan mencari keteraturan - eksplorasi awal, (3) Mencatat pola yang berulang - dokumentasi temuan, (4) Mengidentifikasi jenis pola - klasifikasi, (5) Membuat kesimpulan - interpretasi, dan (6) Menerapkan pengetahuan - aplikasi praktis untuk prediksi atau keputusan."
+    },
+    
+    {
+      "id": "pol_l1_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan contoh data di kolom kiri dengan jenis pola yang terlihat di kolom kanan:",
+      "instruction": "Pilih jenis pola yang sesuai untuk setiap contoh data.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Susunan meja kelas: baris 1: 5 meja, baris 2: 5 meja, baris 3: 5 meja"
+        },
+        {
+          "left_id": "2",
+          "left": "Jadwal pelajaran: Senin=Matematika, Selasa=IPA, Rabu=Matematika, Kamis=IPA"
+        },
+        {
+          "left_id": "3",
+          "left": "Tinggi tanaman: hari1=2cm, hari3=4cm, hari5=6cm, hari7=8cm"
+        },
+        {
+          "left_id": "4",
+          "left": "Warna kaos di rak: merah, biru, hijau, merah, biru, hijau"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Pola numerik (penambahan tetap)"
+        },
+        {
+          "id": "B",
+          "text": "Pola pengulangan (urutan berulang)"
+        },
+        {
+          "id": "C",
+          "text": "Pola spasial (pengaturan ruang)"
+        },
+        {
+          "id": "D",
+          "text": "Pola bergantian (alternating pattern)"
+        }
+      ],
+      "correct_matches": {
+        "1": "C",
+        "2": "D",
+        "3": "A",
+        "4": "B"
+      },
+      "explanation": "Pasangan yang benar: (1) Susunan meja kelas → Pola spasial karena menunjukkan pengaturan ruang yang teratur, (2) Jadwal pelajaran → Pola bergantian karena Matematika dan IPA bergantian, (3) Tinggi tanaman → Pola numerik karena ada penambahan tetap 2cm setiap 2 hari, (4) Warna kaos → Pola pengulangan karena urutan merah-biru-hijau berulang."
+    }
+  ]
+}

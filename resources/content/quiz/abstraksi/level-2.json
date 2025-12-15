@@ -1,0 +1,289 @@
+{
+  "pillar": "abstraksi",
+  "level": 2,
+  "points_per_question": 2,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Level 2 berisi soal-soal yang lebih kompleks dan membutuhkan analisis mendalam. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "abs_l2_q1",
+      "type": "one_choice",
+      "content": "Sebuah sistem pendaftaran lomba di sekolah menerima data dari 300 peserta. Untuk keperluan seleksi administratif, informasi apa yang PALING penting diabstraksikan dari formulir pendaftaran yang lengkap?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Semua data termasuk hobi dan warna favorit"
+        },
+        {
+          "id": "b",
+          "text": "Hanya nama dan nomor telepon"
+        },
+        {
+          "id": "c",
+          "text": "Data kunci: nama, kelas, NIS, mata lomba, persyaratan terpenuhi"
+        },
+        {
+          "id": "d",
+          "text": "Foto peserta dan tanda tangan saja"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Abstraksi yang tepat untuk seleksi administratif adalah data kunci yang relevan dengan tujuan: nama untuk identifikasi, kelas dan NIS untuk verifikasi peserta, mata lomba untuk kategorisasi, dan status persyaratan untuk kelayakan. Informasi seperti hobi dan warna favorit tidak relevan untuk seleksi administratif, sedangkan hanya nama dan telepon terlalu minimal. Foto dan tanda tangan penting tapi bukan satu-satunya data kunci yang diperlukan."
+    },
+    
+    {
+      "id": "abs_l2_q2",
+      "type": "one_choice",
+      "content": "Dalam menganalisis data 400 transaksi koperasi sekolah untuk laporan keuangan bulanan, abstraksi yang tepat adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mencatat setiap transaksi dengan detail: nama pembeli, waktu tepat, semua item"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan menjadi kategori: pemasukan, pengeluaran, laba/rugi per kategori produk"
+        },
+        {
+          "id": "c",
+          "text": "Hanya mencatat total penjualan harian tanpa detail"
+        },
+        {
+          "id": "d",
+          "text": "Menyimpan semua struk transaksi dalam arsip fisik"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Untuk laporan keuangan bulanan, abstraksi yang tepat adalah mengelompokkan transaksi ke dalam kategori bermakna: pemasukan dan pengeluaran dengan breakdown per kategori produk untuk analisis laba/rugi. Ini memberikan insight yang actionable tanpa terjebak dalam detail individual yang berlebihan. Detail setiap transaksi terlalu granular untuk laporan eksekutif, sedangkan total harian tanpa breakdown terlalu abstrak dan kehilangan informasi penting. Arsip fisik bukan bentuk abstraksi data."
+    },
+    
+    {
+      "id": "abs_l2_q3",
+      "type": "one_choice",
+      "content": "Sebuah aplikasi pemantauan kebugaran siswa mengumpulkan data: detak jantung, langkah, kalori, tidur, makanan. Untuk laporan kesehatan bulanan guru olahraga, abstraksi yang efektif adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Menyajikan semua data mentah dari semua siswa"
+        },
+        {
+          "id": "b",
+          "text": "Ringkasan: rata-rata aktivitas, persentase siswa aktif, tren mingguan"
+        },
+        {
+          "id": "c",
+          "text": "Hanya menunjukkan data 10 siswa terbaik"
+        },
+        {
+          "id": "d",
+          "text": "Fokus hanya pada data detak jantung maksimal"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Abstraksi yang efektif untuk guru olahraga adalah ringkasan yang memberikan gambaran umum: rata-rata aktivitas menunjukkan level kebugaran kelas, persentase siswa aktif mengidentifikasi partisipasi, dan tren mingguan menunjukkan perkembangan. Ini memungkinkan guru membuat keputusan pedagogis tanpa overwhelmed oleh data mentah. Data mentah terlalu detail, fokus pada 10 siswa terbaik tidak representatif, dan hanya detak jantung maksimal mengabaikan aspek kebugaran lainnya."
+    },
+    
+    {
+      "id": "abs_l2_q4",
+      "type": "multiple_choices",
+      "content": "Sebuah penelitian tentang efektivitas pembelajaran online mengumpulkan data dari 250 siswa: waktu login, durasi, materi diakses, interaksi forum, nilai kuis, feedback. Untuk membuat dashboard kepala sekolah, informasi apa yang harus diabstraksikan? (Pilih semua yang penting)",
+      "hint": "Pilih informasi high-level yang memberikan insight strategis tanpa detail operasional berlebihan",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tingkat partisipasi rata-rata (persentase siswa aktif)"
+        },
+        {
+          "id": "b",
+          "text": "Materi dengan engagement tertinggi dan terendah"
+        },
+        {
+          "id": "c",
+          "text": "Korelasi antara durasi belajar dan nilai"
+        },
+        {
+          "id": "d",
+          "text": "Waktu optimal belajar berdasarkan data login"
+        },
+        {
+          "id": "e",
+          "text": "Semua percakapan detail di forum diskusi"
+        },
+        {
+          "id": "f",
+          "text": "Screenshot setiap halaman yang diakses"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "Dashboard kepala sekolah memerlukan informasi strategis: (a) Tingkat partisipasi menunjukkan adopsi sistem, (b) Materi dengan engagement tinggi/rendah untuk pengembangan konten, (c) Korelasi durasi-nilai mengukur efektivitas pembelajaran, (d) Waktu optimal untuk penjadwalan. Semua percakapan forum dan screenshot setiap halaman terlalu detail dan tidak praktis untuk level eksekutif - ini adalah data operasional yang tidak perlu diabstraksikan ke dashboard kepala sekolah."
+    },
+    
+    {
+      "id": "abs_l2_q5",
+      "type": "multiple_choices",
+      "content": "Dalam merancang database perpustakaan digital dengan 500 ebook, pertimbangan abstraksi yang tepat meliputi: (Pilih semua yang benar)",
+      "hint": "Pilih informasi yang memudahkan pencarian dan manajemen tanpa redundansi berlebihan",
+      "options": [
+        {
+          "id": "a",
+          "text": "Metadata penting: judul, pengarang, ISBN, kategori, tahun"
+        },
+        {
+          "id": "b",
+          "text": "Konten lengkap setiap buku dalam format teks"
+        },
+        {
+          "id": "c",
+          "text": "Statistik penggunaan: dibaca, diunduh, direview"
+        },
+        {
+          "id": "d",
+          "text": "Scan sampul buku dalam resolusi tinggi"
+        },
+        {
+          "id": "e",
+          "text": "Riwayat pembaca per halaman"
+        },
+        {
+          "id": "f",
+          "text": "Ringkasan/sinopsis untuk preview"
+        }
+      ],
+      "correct_answers": ["a", "c", "f"],
+      "explanation": "Abstraksi yang tepat untuk database perpustakaan: (a) Metadata penting untuk pencarian dan katalogisasi yang efektif, (c) Statistik penggunaan untuk manajemen koleksi dan rekomendasi, (f) Ringkasan/sinopsis memberikan preview tanpa harus membuka file lengkap. Konten lengkap dalam teks searchable bisa berguna tapi tidak wajib untuk semua buku dan bisa sangat besar. Scan sampul resolusi tinggi dan riwayat per halaman terlalu detail - resolusi sedang cukup untuk sampul, dan tracking per halaman berlebihan untuk kebanyakan kasus."
+    },
+    
+    {
+      "id": "abs_l2_q6",
+      "type": "multiple_choices",
+      "content": "Sebuah sistem pemantauan kualitas udara di sekolah memiliki 20 sensor yang menghasilkan data setiap 5 menit. Untuk dashboard real-time yang efektif, abstraksi yang diperlukan adalah: (Pilih semua yang tepat)",
+      "hint": "Pilih abstraksi yang memberikan informasi actionable tanpa cognitive overload",
+      "options": [
+        {
+          "id": "a",
+          "text": "Indeks kualitas udara gabungan (baik/sedang/buruk)"
+        },
+        {
+          "id": "b",
+          "text": "Lokasi dengan kualitas terburuk untuk peringatan"
+        },
+        {
+          "id": "c",
+          "text": "Data mentah setiap sensor setiap 5 menit"
+        },
+        {
+          "id": "d",
+          "text": "Tren harian dan perbandingan dengan standar kesehatan"
+        },
+        {
+          "id": "e",
+          "text": "Grafik fluktuasi per menit dari semua sensor"
+        },
+        {
+          "id": "f",
+          "text": "Rekomendasi tindakan berdasarkan level polusi"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "f"],
+      "explanation": "Dashboard real-time yang efektif memerlukan: (a) Indeks gabungan sederhana untuk pemahaman cepat status keseluruhan, (b) Lokasi terburuk untuk respons cepat, (d) Tren harian untuk konteks dan perbandingan standar untuk keputusan kesehatan, (f) Rekomendasi actionable untuk pengguna non-teknis. Data mentah setiap sensor setiap 5 menit dan grafik fluktuasi per menit dari semua sensor terlalu granular dan menyebabkan information overload - ini cocok untuk dashboard teknis detail, bukan dashboard real-time umum."
+    },
+    
+    {
+      "id": "abs_l2_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Sebuah sistem survei kepuasan siswa menerima 350 respon dengan 15 pertanyaan terbuka dan tertutup. Susunlah proses abstraksi untuk menghasilkan laporan eksekutif.",
+      "instruction": "Klik dan drag item untuk mengurutkan proses abstraksi dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Identifikasi tema utama dari jawaban terbuka dengan text mining"
+        },
+        {
+          "id": "step_2",
+          "text": "Hitung persentase kepuasan untuk setiap aspek yang diukur"
+        },
+        {
+          "id": "step_3",
+          "text": "Kodefikasi jawaban terbuka menjadi kategori terbatas"
+        },
+        {
+          "id": "step_4",
+          "text": "Tentukan aspek kritis yang perlu dilaporkan (akademik, fasilitas, guru)"
+        },
+        {
+          "id": "step_5",
+          "text": "Kumpulkan semua respon mentah dari survei"
+        },
+        {
+          "id": "step_6",
+          "text": "Buat visualisasi: diagram untuk data kuantitatif, word cloud untuk kualitatif"
+        },
+        {
+          "id": "step_7",
+          "text": "Bandingkan hasil dengan survei sebelumnya untuk melihat tren"
+        },
+        {
+          "id": "step_8",
+          "text": "Abaikan komentar yang tidak konstruktif atau spam"
+        }
+      ],
+      "correct_order": ["step_5", "step_3", "step_1", "step_4", "step_2", "step_7", "step_6", "step_8"],
+      "explanation": "Proses abstraksi yang sistematis: (1) Kumpulkan respon mentah - pengumpulan data awal, (2) Kodefikasi jawaban terbuka - strukturisasi data kualitatif, (3) Identifikasi tema dengan text mining - pengenalan pola dari data terbuka, (4) Tentukan aspek kritis - fokus pada informasi relevan untuk laporan eksekutif, (5) Hitung persentase kepuasan - kuantifikasi untuk setiap aspek, (6) Bandingkan dengan survei sebelumnya - konteks temporal untuk insight lebih dalam, (7) Buat visualisasi - representasi yang mudah dipahami, (8) Abaikan komentar tidak konstruktif - final cleanup untuk laporan berkualitas."
+    },
+    
+    {
+      "id": "abs_l2_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan skenario pengolahan data di kolom kiri dengan tingkat abstraksi yang sesuai di kolom kanan:",
+      "instruction": "Pilih tingkat abstraksi yang paling sesuai untuk setiap skenario pengolahan data.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Data kehadiran 300 siswa × 90 hari untuk laporan wali kelas"
+        },
+        {
+          "left_id": "2",
+          "left": "Data nilai 8 pelajaran × 200 siswa untuk rapor"
+        },
+        {
+          "left_id": "3",
+          "left": "Data transaksi 500 penjualan untuk analisis bisnis koperasi"
+        },
+        {
+          "left_id": "4",
+          "left": "Data sensor lingkungan 10.000 titik untuk sistem peringatan"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Abstraksi sedang: ringkasan statistik (rata-rata, modus, persentase kehadiran)"
+        },
+        {
+          "id": "B",
+          "text": "Abstraksi tinggi: nilai akhir, predikat, ranking"
+        },
+        {
+          "id": "C",
+          "text": "Abstraksi tinggi: pola penjualan, produk terlaris, waktu puncak"
+        },
+        {
+          "id": "D",
+          "text": "Abstraksi sangat tinggi: status normal/warning/alert dengan aturan threshold"
+        }
+      ],
+      "correct_matches": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "explanation": "Tingkat abstraksi yang sesuai: (1) Kehadiran untuk wali kelas → Abstraksi sedang karena butuh ringkasan statistik yang masih mempertahankan informasi kuantitatif untuk monitoring individual, (2) Nilai untuk rapor → Abstraksi tinggi karena data mentah dikonversi menjadi nilai akhir dan predikat yang lebih bermakna untuk evaluasi, (3) Transaksi koperasi → Abstraksi tinggi karena 500 transaksi disintesis menjadi insight bisnis seperti pola dan tren, (4) Sensor lingkungan → Abstraksi sangat tinggi karena 10.000 titik data disederhanakan drastis menjadi status biner/kategorikal untuk keputusan cepat."
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+    "pillar": "pengenalan-pola",
+    "level": 3,
+    "points_per_question": 3,
+    "total_questions": 8,
+    "pass_threshold": 80,
+    "questions": [
+        {
+            "id": 1,
+            "type": "one_choice",
+            "content": "Sebuah sistem monitoring kesehatan sekolah mengumpulkan data 1.200 siswa: aktivitas fisik (langkah/hari), waktu tidur, asupan kalori, dan indeks massa tubuh (IMT). Pola kompleks yang ditemukan menunjukkan: \"Kelompok dengan aktivitas tinggi (>10.000 langkah/hari) dan tidur cukup (7-9 jam) memiliki IMT normal, meskipun asupan kalori bervariasi.\" Manakah kesimpulan PALING tepat tentang pola ini?",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Asupan kalori tidak berpengaruh selama aktivitas fisik cukup"
+                },
+                {
+                    "id": "b",
+                    "text": "Hanya aktivitas fisik yang menentukan status gizi"
+                },
+                {
+                    "id": "c",
+                    "text": "Interaksi antara aktivitas fisik dan tidur lebih penting daripada faktor tunggal"
+                },
+                {
+                    "id": "d",
+                    "text": "Semua data saling berkorelasi sempurna tanpa pengecualian"
+                }
+            ],
+            "correct_answer": "c",
+            "explanation": "Pola menunjukkan bahwa KOMBINASI aktivitas fisik tinggi DAN tidur cukup menghasilkan IMT normal, bukan faktor tunggal. Ini adalah contoh pattern recognition multi-dimensi dimana interaksi antar variabel lebih bermakna daripada variabel individual."
+        },
+        {
+            "id": 2,
+            "type": "multiple_choices",
+            "content": "Sebuah platform e-learning menganalisis data interaksi 2.500 siswa dengan 50 modul pembelajaran. Sistem menemukan beberapa pola kompleks. Manakah yang merupakan pola multi-dimensi yang bermakna untuk meningkatkan desain pembelajaran? (Pilih semua yang benar)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Siswa yang menyelesaikan kuis di akhir modul memiliki retensi 40% lebih tinggi"
+                },
+                {
+                    "id": "b",
+                    "text": "Video dengan durasi 5-8 menit memiliki completion rate 85%, sedangkan >15 menit hanya 45%"
+                },
+                {
+                    "id": "c",
+                    "text": "Modul dengan interaktifitas tinggi (drag-drop, simulasi) lebih efektif untuk pelajaran sains"
+                },
+                {
+                    "id": "d",
+                    "text": "Waktu akses optimal adalah pukul 16.00-18.00 dengan rata-rata durasi belajar 35 menit"
+                },
+                {
+                    "id": "e",
+                    "text": "Tidak ada perbedaan signifikan antara metode pembelajaran apapun"
+                },
+                {
+                    "id": "f",
+                    "text": "Pola navigasi menunjukkan siswa sering kembali ke modul dasar sebelum mengerjakan ujian"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d", "f"],
+            "explanation": "Semua pola kecuali opsi e adalah insights yang actionable untuk desain pembelajaran: pola retensi (a), pola durasi optimal (b), pola efektivitas metode berdasarkan konten (c), pola temporal akses (d), dan pola navigasi belajar (f). Opsi e salah karena data justru menunjukkan perbedaan signifikan."
+        },
+        {
+            "id": 3,
+            "type": "multiple_choices",
+            "content": "Sebuah sistem prediksi performa akademik menganalisis data 1.800 siswa selama 2 tahun dengan 15 variabel (nilai, kehadiran, partisipasi, aktivitas ekstra, dll.). Pola yang ditemukan digunakan untuk membuat model prediktif. Prinsip pengenalan pola apa yang diterapkan? (Pilih semua yang benar)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Identifikasi korelasi antara variabel prediktor dan outcome"
+                },
+                {
+                    "id": "b",
+                    "text": "Pengelompokan siswa berdasarkan pola belajar yang serupa"
+                },
+                {
+                    "id": "c",
+                    "text": "Analisis tren perkembangan individu dari waktu ke waktu"
+                },
+                {
+                    "id": "d",
+                    "text": "Deteksi anomali (siswa dengan pola tidak biasa yang perlu perhatian khusus)"
+                },
+                {
+                    "id": "e",
+                    "text": "Pencarian pola periodik dalam data kehadiran dan nilai"
+                },
+                {
+                    "id": "f",
+                    "text": "Pengabaian semua outlier karena dianggap noise"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d", "e"],
+            "explanation": "Sistem prediktif yang komprehensif menerapkan berbagai prinsip pattern recognition: korelasi untuk predictive modeling (a), clustering untuk grouping (b), trend analysis untuk data temporal (c), anomaly detection untuk early warning (d), dan periodic pattern untuk data siklikal (e). Opsi f salah karena outlier justru penting untuk anomaly detection."
+        },
+        {
+            "id": 4,
+            "type": "multiple_choices",
+            "content": "Perhatikan pseudocode untuk algoritma pengenalan pola sederhana dalam data nilai:\n\n1. BACA data_nilai[1000][8] // 1000 siswa, 8 mata pelajaran\n2. UNTUK setiap siswa i:\n     - HITUNG rata_rata_i\n     - KATEGORIKAN: tinggi (≥80), sedang (60-79), rendah (<60)\n3. CARI pola:\n     - Hitung persentase siswa dengan kategori sama di ≥6 pelajaran\n     - Identifikasi pelajaran yang paling sering kategori rendah\n     - Cari korelasi: jika Matematika rendah, apakah Fisika juga rendah?\n4. HASILKAN: pola_dominan, pelajaran_kritis, rekomendasi\n\nJenis pengenalan pola yang dilakukan algoritma ini mencakup: (Pilih semua yang benar)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Pola kategori/kualitatif (tinggi/sedang/rendah)"
+                },
+                {
+                    "id": "b",
+                    "text": "Pola konsistensi (kategori sama di banyak pelajaran)"
+                },
+                {
+                    "id": "c",
+                    "text": "Pola asosiasi/korelasi antar variabel"
+                },
+                {
+                    "id": "d",
+                    "text": "Pola deret waktu/perkembangan"
+                },
+                {
+                    "id": "e",
+                    "text": "Pola spasial/distribusi geografis"
+                },
+                {
+                    "id": "f",
+                    "text": "Pola periodik/siklus"
+                }
+            ],
+            "correct_answers": ["a", "b", "c"],
+            "explanation": "Algoritma ini mengidentifikasi: pola kategori melalui klasifikasi tinggi/sedang/rendah (a), pola konsistensi dengan menghitung siswa yang memiliki kategori sama di ≥6 pelajaran (b), dan pola asosiasi dengan mencari korelasi antar mata pelajaran (c). Tidak ada analisis temporal (d), spasial (e), atau periodik (f) dalam algoritma ini."
+        },
+        {
+            "id": 5,
+            "type": "multiple_choices",
+            "content": "Sebuah sistem smart campus mengumpulkan data sensor dari 100 titik di sekolah: suhu, kelembaban, cahaya, suara, dan occupancy. Data 10.000 titik/hari dianalisis untuk optimalisasi energi. Evaluasilah pola-pola berikut mana yang PALING BERMANFAAT untuk tujuan tersebut: (Pilih semua yang efektif)",
+            "options": [
+                {
+                    "id": "a",
+                    "text": "Pola occupancy ruangan berdasarkan waktu (kapan kosong/penuh)"
+                },
+                {
+                    "id": "b",
+                    "text": "Korelasi antara suhu luar dan penggunaan AC"
+                },
+                {
+                    "id": "c",
+                    "text": "Pola aktivitas di koridor selama pergantian jam pelajaran"
+                },
+                {
+                    "id": "d",
+                    "text": "Perbedaan pola energi antara hari ujian dan hari biasa"
+                },
+                {
+                    "id": "e",
+                    "text": "Pola acak yang tidak konsisten antar hari"
+                },
+                {
+                    "id": "f",
+                    "text": "Pola penggunaan lampu di ruang yang sama dengan jendela besar"
+                }
+            ],
+            "correct_answers": ["a", "b", "c", "d", "f"],
+            "explanation": "Untuk optimalisasi energi, pola yang bermanfaat adalah: occupancy untuk mengatur HVAC/lighting (a), korelasi suhu untuk efisiensi AC (b), pola aktivitas untuk scheduling (c), pola berbasis event untuk adaptive control (d), dan pola pencahayaan natural untuk menghemat listrik (f). Pola acak (e) tidak berguna karena tidak predictable dan tidak actionable."
+        },
+        {
+            "id": 6,
+            "type": "drag_drop",
+            "drag_drop_type": "sequence",
+            "content": "Sebuah sistem rekomendasi bacaan untuk perpustakaan digital menganalisis data 50.000 interaksi pembaca (baca, like, bookmark, share). Susunlah pipeline pengenalan pola untuk sistem rekomendasi yang efektif.",
+            "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah dari pertama hingga terakhir.",
+            "items": [
+                {
+                    "id": "item1",
+                    "text": "Pengumpulan dan preprocessing data interaksi"
+                },
+                {
+                    "id": "item2",
+                    "text": "Klasifikasi buku berdasarkan genre, tingkat kesulitan, panjang"
+                },
+                {
+                    "id": "item3",
+                    "text": "Identifikasi pola: \"pembaca yang suka A juga suka B\""
+                },
+                {
+                    "id": "item4",
+                    "text": "Clustering pembaca berdasarkan pola baca yang serupa"
+                },
+                {
+                    "id": "item5",
+                    "text": "Analisis pola rating dan review untuk sentimen"
+                },
+                {
+                    "id": "item6",
+                    "text": "Pelatihan model machine learning sederhana"
+                },
+                {
+                    "id": "item7",
+                    "text": "Validasi model dengan data testing dan ukuran akurasi"
+                },
+                {
+                    "id": "item8",
+                    "text": "Implementasi sistem rekomendasi hybrid (konten-based + collaborative)"
+                }
+            ],
+            "correct_order": ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"],
+            "explanation": "Pipeline yang efektif: (1) Kumpulkan dan bersihkan data, (2) Klasifikasikan konten untuk content-based filtering, (3) Identifikasi association rules untuk collaborative filtering, (4) Cluster users untuk personalisasi, (5) Analisis sentimen untuk quality scoring, (6) Latih model prediktif, (7) Validasi untuk memastikan akurasi, (8) Implementasikan sistem hybrid yang menggabungkan semua insights."
+        },
+        {
+            "id": 7,
+            "type": "drag_drop",
+            "drag_drop_type": "matching",
+            "content": "Sebuah penelitian longitudinal melacak 800 siswa selama 3 tahun dengan data multi-sumber: akademik, sosial, ekstrakurikuler, kesehatan. Pasangkan setiap tujuan penelitian dengan teknik pengenalan pola yang paling tepat.",
+            "instruction": "Pilih teknik yang paling sesuai untuk setiap tujuan penelitian.",
+            "pairs": [
+                {
+                    "left_id": "1",
+                    "left": "Mengidentifikasi faktor prediktif keberhasilan di perguruan tinggi"
+                },
+                {
+                    "left_id": "2",
+                    "left": "Mendeteksi early warning signs untuk dropout"
+                },
+                {
+                    "left_id": "3",
+                    "left": "Memahami perkembangan pola belajar dari waktu ke waktu"
+                },
+                {
+                    "left_id": "4",
+                    "left": "Mengelompokkan siswa berdasarkan profil perkembangan holistik"
+                }
+            ],
+            "right_items": [
+                {
+                    "id": "A",
+                    "text": "Analisis survival dengan time-to-event data"
+                },
+                {
+                    "id": "B",
+                    "text": "Analisis regresi dengan feature selection"
+                },
+                {
+                    "id": "C",
+                    "text": "Sequence mining untuk pola perkembangan temporal"
+                },
+                {
+                    "id": "D",
+                    "text": "Multi-dimensional clustering dengan variabel gabungan"
+                }
+            ],
+            "correct_matches": {
+                "1": "B",
+                "2": "A",
+                "3": "C",
+                "4": "D"
+            },
+            "explanation": "Pasangan yang tepat: (1-B) Prediksi memerlukan regresi untuk mengidentifikasi faktor yang paling berpengaruh, (2-A) Dropout adalah time-to-event problem yang cocok dengan survival analysis, (3-C) Perkembangan temporal memerlukan sequence mining untuk menangkap perubahan pola, (4-D) Profil holistik memerlukan clustering multi-dimensi untuk mengelompokkan siswa dengan karakteristik kompleks."
+        },
+        {
+            "id": 8,
+            "type": "drag_drop",
+            "drag_drop_type": "sequence",
+            "content": "Rancang framework pengenalan pola untuk sistem early warning academic performance dengan data 1.500 siswa. Susun komponen berikut menjadi arsitektur yang logis.",
+            "instruction": "Klik dan drag item untuk menyusun dari layer paling dasar (fondasi) hingga layer aplikasi (output).",
+            "items": [
+                {
+                    "id": "layer1",
+                    "text": "Layer Input: data akademik, kehadiran, aktivitas, sosio-demografi"
+                },
+                {
+                    "id": "layer2",
+                    "text": "Layer Penyimpanan: database terstruktur dan data lake"
+                },
+                {
+                    "id": "layer3",
+                    "text": "Layer Preprocessing: cleaning, normalisasi, feature extraction"
+                },
+                {
+                    "id": "layer4",
+                    "text": "Layer Integrasi: penggabungan pola dari berbagai sumber data"
+                },
+                {
+                    "id": "layer5",
+                    "text": "Layer Analisis: algoritma anomaly detection dan trend analysis"
+                },
+                {
+                    "id": "layer6",
+                    "text": "Layer Visualisasi: dashboard untuk guru dan orang tua"
+                },
+                {
+                    "id": "layer7",
+                    "text": "Layer Monitoring: tracking efektivitas prediksi dan false alarms"
+                },
+                {
+                    "id": "layer8",
+                    "text": "Layer Output: alert level (hijau/kuning/merah) dengan rekomendasi"
+                }
+            ],
+            "correct_order": ["layer1", "layer2", "layer3", "layer4", "layer5", "layer6", "layer7", "layer8"],
+            "explanation": "Arsitektur logis dari dasar ke aplikasi: (1) Input sebagai sumber data, (2) Penyimpanan untuk raw data, (3) Preprocessing untuk data quality, (4) Integrasi untuk menggabungkan multi-source, (5) Analisis untuk pattern recognition dan prediksi, (6) Visualisasi untuk user interface, (7) Monitoring untuk sistem feedback loop, (8) Output sebagai actionable insights dengan rekomendasi spesifik."
+        }
+    ]
+}

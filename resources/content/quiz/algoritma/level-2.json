@@ -1,0 +1,289 @@
+{
+  "pillar": "algoritma",
+  "level": 2,
+  "points_per_question": 2,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Level 2 berisi soal-soal yang lebih kompleks dan membutuhkan analisis mendalam. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "alg_l2_q1",
+      "type": "one_choice",
+      "content": "Sebuah perpustakaan memiliki 400 buku yang perlu diurutkan berdasarkan kode buku untuk memudahkan pencarian. Manakah algoritma pengurutan yang PALING EFISIEN untuk jumlah data ini?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bubble Sort (membandingkan dan menukar pasangan berdekatan berulang kali)"
+        },
+        {
+          "id": "b",
+          "text": "Quick Sort (membagi data dan mengurutkan rekursif)"
+        },
+        {
+          "id": "c",
+          "text": "Linear Search (mencari satu per satu dari awal)"
+        },
+        {
+          "id": "d",
+          "text": "Tidak ada perbedaan, semua sama efisiennya"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Quick Sort adalah algoritma paling efisien untuk 400 data karena memiliki kompleksitas waktu rata-rata O(n log n), jauh lebih cepat daripada Bubble Sort yang O(n²). Bubble Sort cocok untuk data kecil tapi tidak efisien untuk 400 buku. Linear Search adalah algoritma pencarian bukan pengurutan. Untuk dataset berukuran menengah-besar seperti ini, Quick Sort atau Merge Sort adalah pilihan optimal."
+    },
+    
+    {
+      "id": "alg_l2_q2",
+      "type": "one_choice",
+      "content": "Dalam sistem pendaftaran online dengan 300 peserta, untuk memvalidasi keunikan email yang didaftarkan, algoritma apa yang PALING TEPAT?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memeriksa setiap email baru dengan semua email yang sudah terdaftar secara berurutan"
+        },
+        {
+          "id": "b",
+          "text": "Menggunakan hash table untuk menyimpan email dan memeriksa duplikat dengan cepat"
+        },
+        {
+          "id": "c",
+          "text": "Mengurutkan semua email terlebih dahulu baru memeriksa duplikat"
+        },
+        {
+          "id": "d",
+          "text": "Tidak memeriksa duplikat sama sekali untuk menghemat waktu"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Hash table adalah struktur data paling efisien untuk validasi keunikan dengan kompleksitas O(1) untuk insertion dan lookup. Pemeriksaan berurutan memiliki kompleksitas O(n) untuk setiap pengecekan, yang tidak efisien. Mengurutkan terlebih dahulu menambah overhead O(n log n). Tidak memeriksa duplikat akan menyebabkan data tidak valid. Hash table memungkinkan pengecekan duplikat instan sambil menjaga integritas data."
+    },
+    
+    {
+      "id": "alg_l2_q3",
+      "type": "one_choice",
+      "content": "Untuk mencari seorang siswa tertentu dari daftar 250 siswa yang sudah diurutkan berdasarkan NIS, algoritma pencarian yang PALING EFISIEN adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Linear Search (memeriksa satu per satu dari awal)"
+        },
+        {
+          "id": "b",
+          "text": "Binary Search (membagi data menjadi dua bagian berulang)"
+        },
+        {
+          "id": "c",
+          "text": "Random Search (memeriksa secara acak)"
+        },
+        {
+          "id": "d",
+          "text": "Semua sama efisiennya karena data tidak banyak"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Binary Search adalah algoritma paling efisien untuk data yang sudah terurut dengan kompleksitas O(log n). Untuk 250 data, Binary Search membutuhkan maksimal 8 perbandingan (log₂ 250 ≈ 8), sedangkan Linear Search bisa membutuhkan hingga 250 perbandingan. Random Search tidak sistematis dan tidak efisien. Meskipun untuk data kecil perbedaannya tidak terlalu signifikan, Binary Search tetap lebih superior dan merupakan best practice untuk data terurut."
+    },
+    
+    {
+      "id": "alg_l2_q4",
+      "type": "multiple_choices",
+      "content": "Dalam merancang sistem pengolahan nilai 200 siswa untuk 8 mata pelajaran, algoritma-algoritma berikut mungkin diperlukan: (Pilih semua yang relevan)",
+      "hint": "Pilih algoritma yang relevan untuk sistem pengolahan nilai",
+      "options": [
+        {
+          "id": "a",
+          "text": "Algoritma pengurutan untuk membuat ranking siswa"
+        },
+        {
+          "id": "b",
+          "text": "Algoritma pencarian untuk menemukan data siswa tertentu"
+        },
+        {
+          "id": "c",
+          "text": "Algoritma validasi untuk memeriksa nilai dalam rentang 0-100"
+        },
+        {
+          "id": "d",
+          "text": "Algoritma kompresi untuk mengurangi ukuran file nilai"
+        },
+        {
+          "id": "e",
+          "text": "Algoritma perhitungan untuk menghitung rata-rata dan total"
+        },
+        {
+          "id": "f",
+          "text": "Algoritma enkripsi untuk keamanan data nilai"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "e", "f"],
+      "explanation": "Algoritma yang relevan: (a) Pengurutan untuk membuat ranking berdasarkan nilai, (b) Pencarian untuk akses cepat data siswa tertentu, (c) Validasi untuk memastikan nilai dalam rentang valid 0-100, (e) Perhitungan untuk statistik seperti rata-rata, median, total, (f) Enkripsi untuk melindungi kerahasiaan data nilai siswa. Algoritma kompresi tidak relevan karena data 200 siswa × 8 pelajaran relatif kecil dan tidak memerlukan kompresi - prioritas adalah akses cepat dan keamanan, bukan penghematan storage."
+    },
+    
+    {
+      "id": "alg_l2_q5",
+      "type": "multiple_choices",
+      "content": "Pertimbangan dalam memilih algoritma untuk pengolahan data 500 transaksi koperasi sekolah meliputi: (Pilih semua yang benar)",
+      "hint": "Pilih faktor-faktor teknis yang mempengaruhi pemilihan algoritma",
+      "options": [
+        {
+          "id": "a",
+          "text": "Jumlah data yang akan diproses"
+        },
+        {
+          "id": "b",
+          "text": "Apakah data sudah terurut atau belum"
+        },
+        {
+          "id": "c",
+          "text": "Ketersediaan memori dan waktu pemrosesan"
+        },
+        {
+          "id": "d",
+          "text": "Kompleksitas implementasi algoritma"
+        },
+        {
+          "id": "e",
+          "text": "Warna interface aplikasi yang akan digunakan"
+        },
+        {
+          "id": "f",
+          "text": "Jenis laporan yang dihasilkan dari data"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d", "f"],
+      "explanation": "Pertimbangan valid: (a) Jumlah data menentukan kompleksitas algoritma yang cocok, (b) Data terurut memungkinkan algoritma lebih efisien seperti Binary Search, (c) Keterbatasan memori dan waktu mempengaruhi pilihan algoritma (trade-off space vs time complexity), (d) Kompleksitas implementasi mempengaruhi maintainability dan development time, (f) Jenis laporan menentukan algoritma yang dibutuhkan (agregasi, sorting, filtering). Warna interface adalah aspek UI/UX yang tidak relevan dengan pemilihan algoritma pengolahan data."
+    },
+    
+    {
+      "id": "alg_l2_q6",
+      "type": "multiple_choices",
+      "content": "Untuk analisis data absensi 350 siswa selama 90 hari, algoritma yang dapat diterapkan adalah: (Pilih semua yang tepat)",
+      "hint": "Pilih algoritma yang sesuai dengan skala dan jenis analisis data absensi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Algoritma agregasi untuk menghitung total kehadiran per siswa"
+        },
+        {
+          "id": "b",
+          "text": "Algoritma pencarian pola untuk identifikasi siswa dengan pola absensi mencurigakan"
+        },
+        {
+          "id": "c",
+          "text": "Algoritma clustering untuk mengelompokkan siswa berdasarkan pola kehadiran"
+        },
+        {
+          "id": "d",
+          "text": "Algoritma sorting untuk mengurutkan siswa berdasarkan jumlah ketidakhadiran"
+        },
+        {
+          "id": "e",
+          "text": "Algoritma komputasi paralel karena data terlalu besar"
+        },
+        {
+          "id": "f",
+          "text": "Algoritma randomisasi untuk memilih sampel absensi"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "d"],
+      "explanation": "Algoritma yang tepat: (a) Agregasi untuk menghitung total/persentase kehadiran per siswa, (b) Pattern recognition untuk deteksi pola absensi tidak normal (misal: selalu Senin), (c) Clustering untuk mengelompokkan siswa dengan pola kehadiran serupa, (d) Sorting untuk membuat ranking atau daftar siswa berdasarkan ketidakhadiran. Komputasi paralel tidak perlu karena 350×90 = 31,500 data points masih sangat kecil untuk diproses secara serial. Randomisasi tidak tepat karena analisis absensi memerlukan data lengkap, bukan sampel acak."
+    },
+    
+    {
+      "id": "alg_l2_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Susunlah langkah-langkah algoritma Binary Search untuk mencari nama siswa dalam daftar 300 nama yang sudah terurut alfabet.",
+      "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah Binary Search dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Bandingkan nama yang dicari dengan nama di posisi tengah"
+        },
+        {
+          "id": "step_2",
+          "text": "Tentukan rentang pencarian awal (awal=1, akhir=300)"
+        },
+        {
+          "id": "step_3",
+          "text": "Jika sama, kembalikan posisi dan selesai"
+        },
+        {
+          "id": "step_4",
+          "text": "Jika tidak ditemukan dalam rentang, kembalikan \"tidak ditemukan\""
+        },
+        {
+          "id": "step_5",
+          "text": "Jika nama dicari lebih kecil, ubah rentang menjadi awal sampai tengah-1"
+        },
+        {
+          "id": "step_6",
+          "text": "Ulangi proses sampai ditemukan atau rentang kosong"
+        },
+        {
+          "id": "step_7",
+          "text": "Jika nama dicari lebih besar, ubah rentang menjadi tengah+1 sampai akhir"
+        },
+        {
+          "id": "step_8",
+          "text": "Hitung posisi tengah = (awal + akhir) dibagi 2"
+        }
+      ],
+      "correct_order": ["step_2", "step_8", "step_1", "step_3", "step_5", "step_7", "step_6", "step_4"],
+      "explanation": "Algoritma Binary Search: (1) Tentukan rentang awal - inisialisasi batas pencarian, (2) Hitung posisi tengah - divide step untuk membagi rentang, (3) Bandingkan dengan nilai tengah - pemeriksaan apakah target ditemukan, (4) Jika sama, return posisi - base case sukses, (5) Jika lebih kecil, ubah rentang ke kiri - eliminasi setengah kanan, (6) Jika lebih besar, ubah rentang ke kanan - eliminasi setengah kiri, (7) Ulangi proses - recursive/iterative step, (8) Jika rentang kosong, tidak ditemukan - base case gagal. Binary Search efisien dengan O(log n) karena mengeliminasi setengah data setiap iterasi."
+    },
+    
+    {
+      "id": "alg_l2_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan skenario pengolahan data di kolom kiri dengan algoritma standar yang paling tepat di kolom kanan:",
+      "instruction": "Pilih algoritma standar yang paling sesuai untuk setiap skenario pengolahan data.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Mengelompokkan 400 siswa ke dalam 10 kelompok praktikum secara adil"
+        },
+        {
+          "left_id": "2",
+          "left": "Menjadwalkan 15 mata pelajaran ke dalam 5 hari tanpa bentrok"
+        },
+        {
+          "left_id": "3",
+          "left": "Mencari jalur terpendek antar gedung di area sekolah"
+        },
+        {
+          "left_id": "4",
+          "left": "Mengalokasikan 20 proyektor ke 25 kelas yang membutuhkan"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Algoritma Round Robin atau Load Balancing"
+        },
+        {
+          "id": "B",
+          "text": "Algoritma Penjadwalan (Scheduling Algorithm)"
+        },
+        {
+          "id": "C",
+          "text": "Algoritma Graph (Dijkstra atau sejenisnya)"
+        },
+        {
+          "id": "D",
+          "text": "Algoritma Alokasi Sumber Daya (Resource Allocation)"
+        }
+      ],
+      "correct_matches": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "explanation": "Pasangan algoritma yang tepat: (1) Mengelompokkan 400 siswa ke 10 kelompok → Round Robin/Load Balancing untuk distribusi merata dan adil, (2) Menjadwalkan 15 mata pelajaran ke 5 hari → Scheduling Algorithm untuk menghindari konflik waktu dan optimasi penggunaan slot, (3) Jalur terpendek antar gedung → Graph Algorithm (Dijkstra) untuk menemukan shortest path dalam graf berbobot, (4) Alokasi 20 proyektor ke 25 kelas → Resource Allocation Algorithm untuk optimasi distribusi sumber daya terbatas dengan prioritas atau kriteria tertentu."
+    }
+  ]
+}

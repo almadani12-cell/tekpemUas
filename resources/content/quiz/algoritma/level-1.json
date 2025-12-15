@@ -1,0 +1,276 @@
+{
+  "pillar": "algoritma",
+  "level": 1,
+  "points_per_question": 1,
+  "total_questions": 8,
+  "pass_threshold": 80,
+  "time_limit_minutes": null,
+  "instructions": "Bacalah setiap soal dengan teliti. Anda harus menjawab soal secara berurutan dan tidak dapat mengubah jawaban yang sudah disubmit.",
+  
+  "questions": [
+    {
+      "id": "alg_l1_q1",
+      "type": "one_choice",
+      "content": "Apa yang dimaksud dengan algoritma dalam berpikir komputasional?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memecah masalah besar menjadi bagian kecil"
+        },
+        {
+          "id": "b",
+          "text": "Mengidentifikasi pola dalam kumpulan data"
+        },
+        {
+          "id": "c",
+          "text": "Menyaring informasi penting dari yang tidak relevan"
+        },
+        {
+          "id": "d",
+          "text": "Rangkaian langkah terstruktur untuk menyelesaikan masalah"
+        }
+      ],
+      "correct_answer": "d",
+      "explanation": "Algoritma adalah rangkaian langkah terstruktur dan logis yang dirancang untuk menyelesaikan masalah atau mencapai tujuan tertentu. Algoritma memberikan instruksi yang jelas dan berurutan sehingga masalah dapat diselesaikan secara sistematis dan konsisten."
+    },
+    
+    {
+      "id": "alg_l1_q2",
+      "type": "one_choice",
+      "content": "Contoh algoritma dalam kehidupan sehari-hari adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Resep membuat kue dengan langkah-langkah berurutan"
+        },
+        {
+          "id": "b",
+          "text": "Mengelompokkan buku berdasarkan warna"
+        },
+        {
+          "id": "c",
+          "text": "Memilih pakaian berdasarkan cuaca"
+        },
+        {
+          "id": "d",
+          "text": "Mengamati pola pertumbuhan tanaman"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Resep membuat kue adalah contoh algoritma karena berisi langkah-langkah berurutan yang jelas dan terstruktur untuk mencapai hasil tertentu (kue yang jadi). Setiap langkah harus dilakukan dalam urutan yang tepat untuk mencapai hasil yang diharapkan."
+    },
+    
+    {
+      "id": "alg_l1_q3",
+      "type": "one_choice",
+      "content": "Karakteristik penting dari algoritma yang baik adalah...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tidak harus jelas, bisa interpretasi berbeda"
+        },
+        {
+          "id": "b",
+          "text": "Harus memiliki langkah yang tidak terbatas"
+        },
+        {
+          "id": "c",
+          "text": "Jelas, terbatas, dan menghasilkan output yang diharapkan"
+        },
+        {
+          "id": "d",
+          "text": "Hanya untuk masalah matematika saja"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Algoritma yang baik harus memiliki karakteristik: (1) Jelas - setiap langkah tidak ambigu dan dapat dipahami, (2) Terbatas - memiliki jumlah langkah yang pasti dan akan berakhir, (3) Menghasilkan output yang diharapkan - mencapai tujuan yang diinginkan. Ketiga karakteristik ini memastikan algoritma dapat dijalankan dengan konsisten dan efektif."
+    },
+    
+    {
+      "id": "alg_l1_q4",
+      "type": "one_choice",
+      "content": "Dalam konteks pengolahan data, algoritma diperlukan untuk...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Membuat data menjadi lebih acak"
+        },
+        {
+          "id": "b",
+          "text": "Menyediakan cara sistematis mengolah data"
+        },
+        {
+          "id": "c",
+          "text": "Menghapus data yang tidak penting"
+        },
+        {
+          "id": "d",
+          "text": "Hanya menampilkan data tanpa pengolahan"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Algoritma dalam pengolahan data diperlukan untuk menyediakan cara sistematis dan terstruktur dalam mengolah data. Dengan algoritma, data dapat diproses secara konsisten, efisien, dan menghasilkan output yang dapat diprediksi sesuai dengan kebutuhan analisis atau pengolahan data."
+    },
+    
+    {
+      "id": "alg_l1_q5",
+      "type": "multiple_choices",
+      "content": "Manakah dari contoh berikut yang merupakan algoritma? (Pilih semua yang benar)",
+      "hint": "Pilih semua contoh yang memiliki langkah-langkah berurutan dan terstruktur",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prosedur melakukan CPR (resusitasi jantung paru)"
+        },
+        {
+          "id": "b",
+          "text": "Cara menggunakan mesin ATM untuk menarik uang"
+        },
+        {
+          "id": "c",
+          "text": "Daftar barang belanja yang tidak berurutan"
+        },
+        {
+          "id": "d",
+          "text": "Langkah-langkah mengoperasikan proyektor di kelas"
+        },
+        {
+          "id": "e",
+          "text": "Gambar denah sekolah"
+        },
+        {
+          "id": "f",
+          "text": "Urutan melakukan login ke komputer sekolah"
+        }
+      ],
+      "correct_answers": ["a", "b", "d", "f"],
+      "explanation": "Yang merupakan algoritma adalah: (a) Prosedur CPR - memiliki langkah-langkah terstruktur untuk menyelamatkan nyawa, (b) Cara menggunakan ATM - urutan langkah untuk menarik uang, (d) Langkah mengoperasikan proyektor - prosedur sistematis untuk menyalakan proyektor, dan (f) Urutan login komputer - langkah berurutan untuk akses sistem. Daftar belanja tidak berurutan dan denah sekolah bukan algoritma karena tidak berisi langkah-langkah prosedural."
+    },
+    
+    {
+      "id": "alg_l1_q6",
+      "type": "multiple_choices",
+      "content": "Syarat-syarat algoritma yang baik meliputi: (Pilih semua yang benar)",
+      "hint": "Pilih karakteristik yang membuat algoritma efektif dan dapat diandalkan",
+      "options": [
+        {
+          "id": "a",
+          "text": "Memiliki awal dan akhir yang jelas"
+        },
+        {
+          "id": "b",
+          "text": "Setiap langkah tidak ambigu (jelas)"
+        },
+        {
+          "id": "c",
+          "text": "Dapat menyelesaikan masalah yang dituju"
+        },
+        {
+          "id": "d",
+          "text": "Harus selalu singkat meski tidak lengkap"
+        },
+        {
+          "id": "e",
+          "text": "Dapat diulang dengan input sama menghasilkan output sama"
+        },
+        {
+          "id": "f",
+          "text": "Hanya menggunakan bahasa pemrograman"
+        }
+      ],
+      "correct_answers": ["a", "b", "c", "e"],
+      "explanation": "Syarat algoritma yang baik: (a) Memiliki awal dan akhir yang jelas - finiteness (terbatas), (b) Setiap langkah tidak ambigu - definiteness (jelas dan pasti), (c) Dapat menyelesaikan masalah - effectiveness (efektif mencapai tujuan), dan (e) Dapat diulang dengan hasil konsisten - deterministic (hasil dapat diprediksi). Algoritma tidak harus singkat dan tidak harus menggunakan bahasa pemrograman - bisa ditulis dalam bahasa natural."
+    },
+    
+    {
+      "id": "alg_l1_q7",
+      "type": "drag_drop",
+      "drag_drop_type": "sequence",
+      "content": "Susunlah langkah-langkah algoritma untuk \"Meminjam buku di perpustakaan sekolah\"",
+      "instruction": "Klik dan drag item untuk mengurutkan langkah-langkah dari pertama hingga terakhir.",
+      "items": [
+        {
+          "id": "step_1",
+          "text": "Membawa buku ke meja sirkulasi"
+        },
+        {
+          "id": "step_2",
+          "text": "Mencari buku di katalog atau rak"
+        },
+        {
+          "id": "step_3",
+          "text": "Menerima buku dan struk peminjaman"
+        },
+        {
+          "id": "step_4",
+          "text": "Memastikan buku tersedia dan boleh dipinjam"
+        },
+        {
+          "id": "step_5",
+          "text": "Menyerahkan kartu anggota perpustakaan"
+        },
+        {
+          "id": "step_6",
+          "text": "Mengembalikan buku sebelum tanggal jatuh tempo"
+        },
+        {
+          "id": "step_7",
+          "text": "Mencatat tanggal pengembalian di kalender"
+        }
+      ],
+      "correct_order": ["step_2", "step_4", "step_1", "step_5", "step_3", "step_6", "step_7"],
+      "explanation": "Urutan algoritma meminjam buku: (1) Mencari buku di katalog/rak - menemukan buku yang diinginkan, (2) Memastikan buku tersedia dan boleh dipinjam - validasi ketersediaan, (3) Membawa buku ke meja sirkulasi - persiapan peminjaman, (4) Menyerahkan kartu anggota - identifikasi peminjam, (5) Menerima buku dan struk - konfirmasi peminjaman, (6) Mengembalikan buku sebelum jatuh tempo - pelaksanaan kewajiban, (7) Mencatat tanggal pengembalian - reminder untuk menghindari keterlambatan."
+    },
+    
+    {
+      "id": "alg_l1_q8",
+      "type": "drag_drop",
+      "drag_drop_type": "matching",
+      "content": "Pasangkan jenis masalah di kolom kiri dengan contoh algoritma yang sesuai di kolom kanan:",
+      "instruction": "Pilih contoh algoritma yang sesuai untuk setiap jenis masalah.",
+      "pairs": [
+        {
+          "left_id": "1",
+          "left": "Pengurutan data"
+        },
+        {
+          "left_id": "2",
+          "left": "Pencarian informasi"
+        },
+        {
+          "left_id": "3",
+          "left": "Validasi input"
+        },
+        {
+          "left_id": "4",
+          "left": "Perhitungan matematika"
+        }
+      ],
+      "right_items": [
+        {
+          "id": "A",
+          "text": "Memeriksa apakah NIS terdiri dari 8 digit angka"
+        },
+        {
+          "id": "B",
+          "text": "Mengurutkan daftar nama siswa secara alfabetis"
+        },
+        {
+          "id": "C",
+          "text": "Mencari definisi kata dalam kamus dengan metode bagi dua"
+        },
+        {
+          "id": "D",
+          "text": "Menghitung rata-rata nilai dari daftar angka"
+        }
+      ],
+      "correct_matches": {
+        "1": "B",
+        "2": "C",
+        "3": "A",
+        "4": "D"
+      },
+      "explanation": "Pasangan yang tepat: (1) Pengurutan data → Mengurutkan nama siswa alfabetis - sorting algorithm, (2) Pencarian informasi → Mencari kata dalam kamus metode bagi dua - binary search algorithm, (3) Validasi input → Memeriksa format NIS 8 digit - input validation algorithm, (4) Perhitungan matematika → Menghitung rata-rata nilai - mathematical computation algorithm."
+    }
+  ]
+}
