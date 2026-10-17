@@ -1,0 +1,848 @@
+================================================================================
+        DESKRIPSI PAGE - MEDIA PEMBELAJARAN BERPIKIR KOMPUTASIONAL
+================================================================================
+
+Proyek: Media Pembelajaran Berpikir Komputasional untuk SMK Kelas X
+Developer: Isa Aulia Almadani
+Framework: Laravel 11 + Tailwind CSS
+Database: MySQL
+
+================================================================================
+1. LANDING PAGE (Halaman Utama)
+================================================================================
+
+Route: / (GET)
+Controller: LandingController@index
+View: resources/views/landing.blade.php
+
+DESKRIPSI:
+Landing page merupakan halaman pertama yang dilihat pengunjung ketika mengakses
+aplikasi. Halaman ini dirancang dengan desain modern dan menarik menggunakan 
+mesh gradient background dan animasi blob shapes yang dinamis.
+
+FITUR UTAMA:
+- Hero Section dengan background animasi gradient dan blob shapes
+- Navbar transparan yang berubah menjadi solid saat di-scroll
+- Informasi singkat tentang berpikir komputasional
+- Call-to-action buttons untuk login dan register
+- Penjelasan 4 pilar berpikir komputasional:
+  * Dekomposisi (🧩) - Memecah masalah kompleks
+  * Pengenalan Pola (🔍) - Mengidentifikasi pola dan kesamaan
+  * Abstraksi (💡) - Fokus pada informasi penting
+  * Algoritma (📝) - Membuat langkah-langkah sistematis
+- Section fitur dengan cards untuk:
+  * Materi Interaktif (teks dan video)
+  * Quiz & Evaluasi dengan sistem level
+  * Tracking Progress dengan grafik performa
+- Section "Mengapa Berpikir Komputasional?" dengan penjelasan manfaat
+- Footer dengan link navigasi dan copyright
+
+DESAIN:
+- Modern dan clean dengan Tailwind CSS
+- Animasi fade-in-up untuk elemen-elemen
+- Card hover effects dengan shadow dan transform
+- Gradient backgrounds (indigo, purple, pink, teal)
+- Responsive untuk mobile, tablet, dan desktop
+
+TARGET PENGGUNA:
+- Pengunjung umum (guest)
+- Calon pengguna yang ingin mendaftar
+
+================================================================================
+2. LOGIN PAGE (Halaman Masuk)
+================================================================================
+
+Route: /login (GET, POST)
+Controller: Auth\LoginController
+View: resources/views/auth/login.blade.php
+Layout: x-guest-layout
+
+DESKRIPSI:
+Halaman login memungkinkan pengguna yang sudah terdaftar untuk masuk ke dalam
+sistem dan mengakses seluruh fitur pembelajaran.
+
+FITUR UTAMA:
+- Form login dengan validasi:
+  * Email address (required, email format)
+  * Password (required, min 8 karakter)
+- Checkbox "Remember Me" untuk menyimpan sesi
+- Link "Lupa Password" untuk password recovery
+- Link ke halaman Register jika belum punya akun
+- Session status notification (success/error messages)
+- Icon visual untuk setiap input field
+
+VALIDASI:
+- Email harus valid dan terdaftar di database
+- Password harus sesuai dengan data yang tersimpan
+- Error messages ditampilkan dengan jelas
+- CSRF token protection
+
+DESAIN:
+- Layout centered dengan card putih
+- Input fields dengan rounded corners dan focus effects
+- Primary button dengan gradient indigo-purple
+- Icons untuk visual guidance (email, password)
+- Responsive design
+
+FLOW:
+1. User memasukkan email dan password
+2. Sistem validasi kredensial
+3. Jika berhasil → redirect ke dashboard
+4. Jika gagal → tampilkan error message
+
+================================================================================
+3. REGISTER PAGE (Halaman Pendaftaran)
+================================================================================
+
+Route: /register (GET, POST)
+Controller: Auth\RegisterController
+View: resources/views/auth/register.blade.php
+Layout: x-guest-layout
+
+DESKRIPSI:
+Halaman register untuk pengguna baru yang ingin membuat akun dan mengakses
+platform pembelajaran berpikir komputasional.
+
+FITUR UTAMA:
+- Form registrasi dengan fields:
+  * Nama Lengkap (required)
+  * Email (required, unique, email format)
+  * Password (required, min 8 karakter)
+  * Konfirmasi Password (required, must match)
+- Link ke halaman Login jika sudah punya akun
+- Auto-redirect ke dashboard setelah berhasil register
+- Session flash message untuk feedback
+
+VALIDASI:
+- Name: required, string, max 255 karakter
+- Email: required, email format, unique di database
+- Password: required, min 8 karakter, konfirmasi harus sama
+- Real-time validation feedback
+- CSRF protection
+
+DESAIN:
+- Konsisten dengan halaman login
+- Input fields dengan icon visual
+- Primary button "Daftar" dengan gradient
+- Link ke halaman login yang jelas
+- Error messages yang informatif
+
+FLOW:
+1. User mengisi form registrasi
+2. Sistem validasi input
+3. Jika valid → buat akun baru di database
+4. Auto-login dan redirect ke dashboard
+5. Jika gagal → tampilkan error dan kembali ke form
+
+================================================================================
+4. DASHBOARD (Halaman Utama Setelah Login)
+================================================================================
+
+Route: /dashboard (GET)
+Controller: DashboardController@index
+View: resources/views/dashboard.blade.php
+Layout: x-learning-layout
+Middleware: auth, verified
+
+DESKRIPSI:
+Dashboard adalah halaman utama yang dilihat user setelah login. Menampilkan
+overview progress belajar, statistik, dan akses cepat ke semua fitur.
+
+FITUR UTAMA:
+- Hero Section dengan greeting personalized:
+  * Menampilkan nama user
+  * Statistik progress: jumlah soal selesai dan quiz dikuasai
+  * CTA buttons: "Mulai Belajar" dan "Ujian Sekarang"
+- Stats Banner (4 cards):
+  * Total Materi Selesai dengan progress bar
+  * Total Quiz Dikerjakan
+  * Rata-rata Nilai dengan warna dinamis
+  * Badge Pencapaian
+- Section "Lanjutkan Belajar" dengan recent materials
+- Section "Quiz Tersedia" dengan cards untuk 4 pilar:
+  * Dekomposisi (Indigo)
+  * Pengenalan Pola (Teal)
+  * Abstraksi (Amber)
+  * Algoritma (Rose)
+- Setiap card quiz menampilkan:
+  * Nama pilar dengan emoji icon
+  * Best score dengan badge warna
+  * Progress bar dengan gradient
+  * Button "Mulai" atau "Lanjutkan"
+- Section "Progress Mingguan" dengan grafik (Chart.js)
+- Quick Links ke Tim Pengembang dan Sumber Referensi
+
+DATA YANG DITAMPILKAN:
+- $questionsCompleted: jumlah soal yang sudah dijawab
+- $quizzesMastered: jumlah quiz dengan score ≥ 70
+- Progress per pilar dengan warna berbeda
+- Recent activity user
+
+DESAIN:
+- Hero dengan mesh gradient background dan blob animations
+- Stats cards dengan shadow dan hover effects
+- Color-coded untuk setiap pilar
+- Progress bars dengan animasi
+- Responsive grid layout
+
+TARGET PENGGUNA:
+- Authenticated users (siswa)
+
+================================================================================
+5. MATERI (Halaman Pembelajaran)
+================================================================================
+
+Route: /materi (GET)
+Controller: MateriController@index
+View: resources/views/materi/index.blade.php
+Layout: x-learning-layout
+Middleware: auth, verified
+
+DESKRIPSI:
+Halaman materi menampilkan 3 jenis format pembelajaran yang bisa dipilih
+oleh siswa sesuai preferensi belajar mereka.
+
+FITUR UTAMA:
+- Page Hero dengan breadcrumb navigation
+- 3 Cards untuk memilih jenis materi:
+  
+  A. MATERI TEKS (Indigo)
+     * Icon dokumen
+     * Deskripsi: Baca dan pahami konsep melalui materi teks terstruktur
+     * Link ke: /materi/{pillar}/text
+     * Format: Reading material dengan penjelasan lengkap
+  
+  B. MATERI VIDEO (Teal)
+     * Icon play video
+     * Deskripsi: Tonton video pembelajaran dengan visualisasi menarik
+     * Link ke: /materi/{pillar}/video
+     * Format: Embedded YouTube videos
+  
+  C. CP & TP (Amber)
+     * Icon checklist
+     * Deskripsi: Capaian Pembelajaran dan Tujuan Pembelajaran
+     * Link ke: /materi/cptp
+     * Format: Tabel dengan CP dan TP untuk setiap pilar
+
+- Section "Akses Cepat ke Pilar" dengan 4 cards:
+  * Dekomposisi
+  * Pengenalan Pola
+  * Abstraksi
+  * Algoritma
+  * Setiap card menampilkan icon, nama, dan link langsung
+
+SUBPAGES:
+
+5.1. MATERI TEXT/VIDEO SHOW
+Route: /materi/{pillar}/{type} (GET)
+Controller: MateriController@show
+View: resources/views/materi/show.blade.php
+
+- Sidebar navigation untuk switch antar pilar
+- Content area dengan tabs untuk text dan video
+- Untuk TEXT: konten markdown/HTML dengan styling
+- Untuk VIDEO: embedded YouTube player
+- Navigation buttons: Previous/Next material
+- Progress tracking
+
+5.2. CP & TP PAGE
+Route: /materi/cptp (GET)
+Controller: MateriController@cptp
+View: resources/views/materi/cptp.blade.php
+
+- Tabel Capaian Pembelajaran (CP)
+- Tabel Tujuan Pembelajaran (TP) untuk setiap pilar
+- Organized by phase/elemen
+- Downloadable/printable format
+
+DESAIN:
+- Cards dengan gradient headers sesuai kategori
+- Hover effects dengan scale dan shadow
+- Icon SVG yang representatif
+- Color-coded navigation
+
+================================================================================
+6. EVALUASI (Halaman Quiz & Ujian)
+================================================================================
+
+Route: /evaluasi (GET)
+Controller: EvaluasiController@index
+View: resources/views/evaluasi/index.blade.php
+Layout: x-learning-layout
+Middleware: auth, verified
+
+DESKRIPSI:
+Halaman evaluasi memungkinkan siswa untuk mengerjakan quiz dan menguji
+pemahaman mereka terhadap materi berpikir komputasional dengan sistem level.
+
+FITUR UTAMA:
+- Page Hero dengan deskripsi evaluasi
+- Grid cards untuk 4 pilar quiz:
+  * Dekomposisi (🧩 - Indigo)
+  * Pengenalan Pola (🔍 - Teal)
+  * Abstraksi (💡 - Amber)
+  * Algoritma (📝 - Rose)
+- Setiap card menampilkan:
+  * Gradient header dengan emoji icon
+  * Nama dan deskripsi pilar
+  * Info: "24 Soal (8 × 3 Level)" dan "3 Level"
+  * Best score dengan badge warna:
+    - Hijau: score > 70 (Kuasai)
+    - Amber: score 1-70 (Cukup)
+    - Abu-abu: belum dikerjakan
+  * Button "Mulai Quiz" atau "Lanjutkan Quiz"
+- Info Banner dengan link ke halaman Performa
+
+SISTEM LEVEL:
+- Setiap pilar memiliki 3 level kesulitan:
+  * Level 1: Mudah (8 soal)
+  * Level 2: Sedang (8 soal)
+  * Level 3: Sulit (8 soal)
+- Level harus diselesaikan secara berurutan
+- Unlock level berikutnya dengan score minimal
+
+SUBPAGES:
+
+6.1. LEVEL SELECTION PAGE
+Route: /evaluasi/{pillar}/levels (GET)
+Controller: QuizLevelController@selectLevel
+View: resources/views/evaluasi/levels.blade.php
+
+- Pilih level yang ingin dikerjakan
+- Tampilkan status setiap level:
+  * Locked (belum bisa diakses)
+  * Available (bisa dikerjakan)
+  * Completed (sudah selesai dengan score)
+- Info jumlah soal dan durasi
+- History attempts per level
+
+6.2. START QUIZ PAGE
+Route: /evaluasi/{pillar}/level/{level}/start (GET)
+Controller: QuizLevelController@startLevel
+
+- Instructions sebelum mulai quiz
+- Informasi rules dan ketentuan
+- Button "Mulai Quiz" untuk start attempt
+- Create quiz_attempts record di database
+
+6.3. QUIZ PAGE (Active Quiz)
+Route: /evaluasi/{pillar}/level/{level}/quiz/{attempt} (GET)
+Controller: QuizLevelController@showQuiz
+View: resources/views/evaluasi/quiz-level.blade.php
+
+FITUR:
+- Header dengan info pilar dan level
+- Progress indicator (soal ke-X dari Y)
+- Timer countdown (optional)
+- Question display area:
+  * Nomor soal
+  * Pertanyaan lengkap dengan gambar (jika ada)
+  * Opsi jawaban (A, B, C, D)
+  * Radio buttons untuk pilih jawaban
+- Navigation buttons:
+  * Previous Question
+  * Next Question
+  * Submit (di soal terakhir)
+- Sidebar dengan thumbnail semua soal:
+  * Menampilkan status: dijawab/belum
+  * Quick navigation ke soal tertentu
+
+SUBMIT ANSWER:
+Route: /evaluasi/{pillar}/level/{level}/quiz/{attempt}/answer (POST)
+Controller: QuizLevelController@submitAnswer
+
+- AJAX submit untuk setiap jawaban
+- Simpan ke quiz_answers table
+- Real-time feedback (optional)
+- No page reload
+
+6.4. RESULTS PAGE
+Route: /evaluasi/{pillar}/level/{level}/results/{attempt} (GET)
+Controller: QuizLevelController@results
+View: resources/views/evaluasi/results.blade.php
+
+FITUR:
+- Score summary dengan animasi:
+  * Total score (percentage)
+  * Jumlah benar dan salah
+  * Waktu pengerjaan
+  * Badge performance (Excellent/Good/Need Improvement)
+- Breakdown per soal:
+  * Nomor soal
+  * Jawaban user
+  * Jawaban yang benar
+  * Pembahasan (explanation)
+  * Indicator: ✓ benar atau ✗ salah
+- Recommendations:
+  * Link ke materi terkait jika score < 70
+  * Button "Coba Lagi" atau "Lanjut ke Level Berikutnya"
+  * Button "Lihat Performa Detail"
+
+6.5. REVIEW PAGE (Old System)
+Route: /evaluasi/{pillar}/review/{attempt} (GET)
+Controller: EvaluasiController@review
+View: resources/views/evaluasi/review.blade.php
+
+- Review jawaban quiz yang sudah dikerjakan
+- Mirip dengan results page tapi untuk attempt lama
+
+DESAIN:
+- Color-coded per pilar untuk konsistensi
+- Progress bars dan indicators yang jelas
+- Cards dengan shadow dan hover effects
+- Gradient backgrounds
+- Responsive untuk semua devices
+
+DATABASE TRACKING:
+- quiz_attempts: record setiap attempt
+  * user_id, quiz_id, level, status, score
+  * started_at, completed_at
+- quiz_answers: jawaban per soal
+  * attempt_id, question_id, selected_options
+  * is_correct
+
+================================================================================
+7. PERFORMA (Halaman Analisis Progress)
+================================================================================
+
+Route: /performa (GET)
+Controller: PerformaController@index
+View: resources/views/performa/index.blade.php
+Layout: x-learning-layout
+Middleware: auth, verified
+
+DESKRIPSI:
+Halaman performa menampilkan analisis mendalam tentang progress belajar siswa
+dengan visualisasi grafik, statistik, dan rekomendasi pembelajaran.
+
+FITUR UTAMA:
+
+7.1. STATS OVERVIEW (4 Cards di atas)
+- Total Quiz Dikerjakan (Indigo)
+  * Icon: checklist
+  * Menghitung semua quiz_attempts yang completed
+- Rata-rata Nilai (Teal)
+  * Icon: chart arrow up
+  * Average dari semua scores
+  * Dalam bentuk percentage
+- Pilar Dikuasai (Amber)
+  * Icon: badge check
+  * Jumlah pilar dengan best_score ≥ 70
+  * Format: X/4 pillars
+- Tingkat Penyelesaian (Rose)
+  * Icon: star
+  * Percentage completion dari semua materials
+  * Calculated dari progress
+
+7.2. GRAFIK PROGRES PER PILAR (Chart.js)
+- Bar chart atau radar chart
+- Sumbu X: 4 pilar (Dekomposisi, Pola, Abstraksi, Algoritma)
+- Sumbu Y: Score (0-100)
+- Data series:
+  * Best Score per pilar (warna primer)
+  * Average Score per pilar (warna sekunder)
+  * Target Score 70% (garis putus-putus)
+- Interactive tooltips
+- Responsive dan animasi smooth
+
+7.3. DETAIL PER PILAR (Cards)
+- 4 cards dengan color-coded borders:
+  * Dekomposisi (border-l-indigo-500)
+  * Pengenalan Pola (border-l-teal-500)
+  * Abstraksi (border-l-amber-500)
+  * Algoritma (border-l-rose-500)
+- Setiap card menampilkan:
+  * Emoji icon + nama pilar
+  * Best score dengan font besar
+  * Progress bar dengan gradient
+  * Mastery level:
+    - "Kuasai" (hijau) jika score > 70
+    - "Cukup" (amber) jika score 50-70
+    - "Perlu Belajar Lagi" (merah) jika score < 50
+    - "Belum Dikerjakan" (abu) jika 0
+  * Total attempts untuk pilar tersebut
+  * Last attempt date
+
+7.4. RECOMMENDATIONS SECTION
+- Conditional recommendations berdasarkan performance:
+  * Jika ada pilar dengan score < 70:
+    → Tampilkan card dengan icon warning
+    → Saran: "Ulangi materi [nama pilar]"
+    → Button link ke materi terkait
+  * Jika semua pilar sudah > 70:
+    → Tampilkan congratulations card
+    → Icon trophy/medal
+    → Motivasi untuk maintain performance
+- Personalized study plan suggestions
+
+7.5. HISTORY TABLE
+- Tabel riwayat quiz attempts:
+  * Tanggal (newest first)
+  * Pilar + Level
+  * Score dengan badge warna
+  * Duration (waktu pengerjaan)
+  * Action: Button "Lihat Detail" atau "Review"
+- Pagination untuk banyak data
+- Filter by pilar or date range
+- Export to PDF/Excel (optional)
+
+7.6. ACHIEVEMENT BADGES
+- Badge system untuk motivasi:
+  * "First Quiz" - quiz pertama selesai
+  * "Perfect Score" - score 100%
+  * "Consistent Learner" - 5 quiz berturut-turut
+  * "Master" - semua pilar score > 80
+- Display badges yang sudah didapat
+- Locked badges yang belum tercapai
+
+VISUALISASI DATA:
+- Chart.js untuk grafik interaktif
+- Progress bars dengan animasi
+- Color-coded indicators
+- Responsive tables
+
+INSIGHTS GENERATED:
+- Trend analysis (improving/declining)
+- Weak areas identification
+- Study recommendations
+- Time spent tracking
+
+DESAIN:
+- Grid layout untuk stats cards
+- Large chart area untuk visibility
+- Detailed cards dengan clear typography
+- Color system konsisten dengan pilar
+- Print-friendly styling
+
+TARGET INSIGHT:
+- Membantu siswa identify weak areas
+- Tracking progress over time
+- Motivation through visualization
+- Actionable recommendations
+
+================================================================================
+8. TIM PENGEMBANG (Halaman Tentang Developer)
+================================================================================
+
+Route: /tim-pengembang (GET)
+Controller: PageController@timPengembang
+View: resources/views/pages/tim-pengembang.blade.php
+Layout: x-learning-layout
+Middleware: auth, verified
+
+DESKRIPSI:
+Halaman yang menampilkan informasi tentang tim pengembang aplikasi dan
+background proyek ini.
+
+FITUR UTAMA:
+
+8.1. DEVELOPER PROFILE CARD (Centered)
+- Single large card dengan:
+  * Foto profil (aspect-square)
+  * Gradient background (indigo-purple-pink)
+  * Nama: Isa Aulia Almadani
+  * Role: Developer & Researcher
+  * Bio: Mahasiswa Pendidikan Teknik Informatika dan Komputer UNS 2023
+  * Card dengan shadow dan hover effect
+
+8.2. ABOUT SECTION
+- Card putih dengan border
+- Judul: "Tentang Proyek Ini"
+- Paragraf penjelasan:
+  * Background pengembangan
+  * Tujuan proyek:
+    → Inovasi pembelajaran Informatika SMK Kelas X
+    → Pendekatan contextual learning
+    → Memudahkan pemahaman berpikir komputasional
+  * Scope:
+    → 4 pilar berpikir komputasional
+    → Materi teks dan video
+    → Quiz interaktif dengan level system
+    → Tracking progress siswa
+  * Target pengguna: Siswa SMK Kelas X
+- Typography yang readable
+- Text-centered untuk emphasis
+
+DESAIN:
+- Centered layout untuk focus
+- Gradient photo backgrounds
+- White cards dengan border-radius
+- Typography hierarchy yang jelas
+- Spacing yang generous untuk readability
+
+INFORMASI DITAMPILKAN:
+- Developer identity
+- Academic background
+- Project goals and scope
+- Technology stack (implisit)
+
+TONE:
+- Professional yet friendly
+- Educational
+- Inspiring
+
+================================================================================
+9. SUMBER REFERENSI (Halaman Daftar Referensi)
+================================================================================
+
+Route: /sumber (GET)
+Controller: PageController@sumber
+View: resources/views/pages/sumber.blade.php
+Layout: x-learning-layout
+Middleware: auth, verified
+
+DESKRIPSI:
+Halaman yang menampilkan daftar lengkap sumber referensi yang digunakan
+dalam pengembangan materi pembelajaran, baik berupa teks maupun video.
+
+FITUR UTAMA:
+
+9.1. LAYOUT
+- 2-column grid (responsive → 1 column di mobile):
+  * Kolom kiri: Sumber Teks (Indigo)
+  * Kolom kanan: Sumber Video (Teal)
+
+9.2. SUMBER TEKS SECTION
+- Header dengan icon buku
+- List cards untuk setiap referensi:
+  * Nomor urut dalam badge
+  * Judul referensi (bold)
+  * Author dan tahun (indigo color)
+  * Deskripsi singkat
+  * Link "Kunjungi Link" dengan icon (jika available)
+- Contoh sumber:
+  * CP & ATP Informatika Fase E - Kemendikbudristek
+  * Computational Thinking: A Beginner's Guide
+  * Problem Solving dengan Pendekatan Algoritmik
+  * Dan lain-lain
+
+9.3. SUMBER VIDEO SECTION
+- Header dengan icon video play
+- List cards untuk setiap video:
+  * Icon YouTube dalam badge
+  * Judul video
+  * Nama channel (teal color)
+  * Deskripsi konten
+  * Link ke YouTube dengan icon
+- Contoh sumber:
+  * CS50's Introduction to Computer Science - Harvard
+  * What is Computational Thinking? - BBC Learning
+  * Algorithm Visualization Videos
+  * Dan lain-lain
+
+9.4. CITATION NOTE (Footer)
+- Banner dengan warna amber
+- Icon informasi
+- Note tentang:
+  * Semua sumber telah dikutip dengan proper attribution
+  * Penggunaan untuk tujuan pendidikan
+  * Copyright acknowledgments
+  * Contact untuk permission/questions
+
+DATA STRUCTURE:
+$sources = [
+    'text' => [
+        [
+            'title' => '...',
+            'author' => '...',
+            'year' => '...',
+            'description' => '...',
+            'url' => '...' (optional)
+        ],
+        ...
+    ],
+    'video' => [
+        [
+            'title' => '...',
+            'channel' => '...',
+            'description' => '...',
+            'url' => '...'
+        ],
+        ...
+    ]
+]
+
+DESAIN:
+- Color-coded sections (Indigo vs Teal)
+- Numbered badges untuk text sources
+- YouTube icon untuk video sources
+- External link icons
+- Cards dengan hover effects
+- Responsive grid → stack di mobile
+- Citation banner dengan amber background
+
+PURPOSE:
+- Academic integrity
+- Provide additional resources
+- Credit content creators
+- Enable further learning
+- Build trust and credibility
+
+================================================================================
+ADDITIONAL PAGES (Built-in Laravel Auth)
+================================================================================
+
+10. FORGOT PASSWORD
+    Route: /forgot-password (GET, POST)
+    - Form untuk request password reset link
+    - Send email dengan reset token
+
+11. RESET PASSWORD
+    Route: /reset-password/{token} (GET, POST)
+    - Form untuk set password baru
+    - Validasi token dan email
+
+12. VERIFY EMAIL
+    Route: /verify-email (GET)
+    - Notification untuk verify email
+    - Resend verification link
+
+13. PROFILE EDIT
+    Route: /profile (GET, PATCH, DELETE)
+    - Edit profile information
+    - Change password
+    - Delete account
+
+================================================================================
+NAVIGASI STRUKTUR
+================================================================================
+
+GUEST USERS:
+Landing → Login/Register
+
+AUTHENTICATED USERS:
+Dashboard → 
+  ├─ Materi (Teks, Video, CP&TP)
+  ├─ Evaluasi (Quiz per Pilar dengan Level)
+  ├─ Performa (Analytics & Stats)
+  ├─ Profile
+  ├─ Tim Pengembang
+  └─ Sumber Referensi
+
+================================================================================
+TEKNOLOGI & FEATURES
+================================================================================
+
+FRONTEND:
+- Tailwind CSS untuk styling
+- Alpine.js untuk interactivity
+- Chart.js untuk grafik
+- Animate on scroll (AOS)
+- Responsive design (mobile-first)
+
+BACKEND:
+- Laravel 11
+- Eloquent ORM
+- Middleware authentication
+- Request validation
+- Controller-based architecture
+
+DATABASE:
+- MySQL
+- Migrations untuk schema
+- Seeders untuk sample data
+- Relations: User, Quiz, Question, Attempt, Answer
+
+KEY FEATURES:
+- Level-based quiz system
+- Progress tracking
+- Performance analytics
+- Multi-format learning (text/video)
+- Personalized dashboard
+- Achievement system (optional)
+
+SECURITY:
+- CSRF protection
+- Authentication & authorization
+- Input validation & sanitization
+- Password hashing (bcrypt)
+- Verified email requirement (optional)
+
+================================================================================
+USER FLOW SUMMARY
+================================================================================
+
+1. Pengunjung → Landing Page → Register/Login
+2. Login → Dashboard (overview)
+3. Dashboard → Pilih Materi → Belajar (Text/Video)
+4. Setelah belajar → Evaluasi → Pilih Pilar
+5. Pilih Level → Start Quiz → Kerjakan Soal
+6. Submit Quiz → Lihat Results
+7. Results → Lihat Performa untuk analytics
+8. Performa → Rekomendasi materi lemah
+9. Ulangi cycle untuk pilar/level lain
+10. Profile management & logout
+
+================================================================================
+COLOR SYSTEM PER PILAR
+================================================================================
+
+Dekomposisi:
+- Primary: Indigo (indigo-500, indigo-600)
+- Light: indigo-50, indigo-100
+- Gradient: from-indigo-500 to-indigo-600
+
+Pengenalan Pola:
+- Primary: Teal (teal-500, teal-600)
+- Light: teal-50, teal-100
+- Gradient: from-teal-500 to-teal-600
+
+Abstraksi:
+- Primary: Amber (amber-500, amber-600)
+- Light: amber-50, amber-100
+- Gradient: from-amber-500 to-amber-600
+
+Algoritma:
+- Primary: Rose (rose-500, rose-600)
+- Light: rose-50, rose-100
+- Gradient: from-rose-500 to-rose-600
+
+================================================================================
+RESPONSIVE BREAKPOINTS
+================================================================================
+
+- Mobile: < 640px (sm)
+- Tablet: 640px - 1024px (md, lg)
+- Desktop: > 1024px (xl, 2xl)
+
+Grid adaptations:
+- Mobile: 1 column
+- Tablet: 2 columns
+- Desktop: 3-4 columns
+
+================================================================================
+ACCESSIBILITY FEATURES
+================================================================================
+
+- Semantic HTML
+- Alt texts untuk images
+- ARIA labels
+- Keyboard navigation support
+- Color contrast compliance
+- Focus states yang jelas
+- Error messages yang deskriptif
+
+================================================================================
+PERFORMANCE OPTIMIZATIONS
+================================================================================
+
+- Lazy loading images
+- CSS/JS minification (Vite)
+- Database query optimization (eager loading)
+- Caching (query results, views)
+- Asset bundling
+- Responsive images
+- Progressive enhancement
+
+================================================================================
+END OF DOCUMENT
+================================================================================
+
+File ini mendeskripsikan seluruh page yang ada dalam aplikasi Media
+Pembelajaran Berpikir Komputasional, termasuk route, controller, view,
+fitur, dan desain dari setiap halaman.
+
+Dibuat pada: 16 Desember 2024
+Developer: Isa Aulia Almadani
+Institution: Universitas Sebelas Maret (UNS)
+Program: Pendidikan Teknik Informatika dan Komputer 2023
